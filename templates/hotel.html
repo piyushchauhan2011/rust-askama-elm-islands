@@ -1,0 +1,258 @@
+{% include "open.html" %}
+<div class="hotel-page">
+    <div class="app-container hotel-page__breadcrumbs">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/destinations/{{ destination_slug }}">{{ destination_name }}</a></li>
+                <li class="is-active" aria-current="page">{{ name }}</li>
+            </ul>
+        </nav>
+    </div>
+    <header class="app-container hotel-page__header">
+        <div>
+            <p class="eyebrow">{{ property_type }} · {{ country }}</p>
+            <h1 class="display-title">{{ name }}</h1>
+            <p class="hotel-page__summary">{{ summary }}</p>
+            <p class="hotel-page__rating">{{ rating_line }}</p>
+        </div>
+        <div class="hotel-page__price">
+            <span>Rooms from</span>
+            <strong>{{ price }}</strong>
+            <small>per night</small>
+        </div>
+    </header>
+    <nav class="hotel-page__nav-wrap" aria-label="Hotel sections">
+        <div class="app-container hotel-page__nav">
+            <a href="#overview">Overview</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#facilities">Facilities</a>
+            <a href="#location">Location</a>
+            <a href="#policies">Policies</a>
+            <a href="#reviews">Reviews</a>
+        </div>
+    </nav>
+    <div class="app-container hotel-page__gallery" id="gallery">
+        <div data-island="Gallery" data-hydrate="visible" data-props="{{ gallery_props }}"></div>
+    </div>
+    {% if highlights.len() > 0 %}
+    <section class="content-section hotel-highlights">
+        <div class="app-container">
+            <p class="eyebrow">WHY STAY HERE</p>
+            <h2 class="section-title">Good reasons to settle in</h2>
+            <div class="hotel-highlights__grid">
+                {% for highlight in highlights %}
+                <article class="card hotel-highlights__card"><div class="card-content"><div><h3>{{ highlight.title }}</h3><p>{{ highlight.summary }}</p></div></div></article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    <section id="overview" class="content-section hotel-page__anchor">
+        <div class="app-container hotel-page__overview">
+            <div>
+                <p class="eyebrow">THE STAY</p>
+                <h2 class="section-title">A place to settle in.</h2>
+                <p>{{ description }}</p>
+            </div>
+            <article class="card hotel-page__inquiry-card">
+                <header class="hotel-page__inquiry-card-header">
+                    <p class="eyebrow eyebrow--light">PLAN YOUR STAY</p>
+                    <h3 class="hotel-page__inquiry-card-title">Interested in {{ name }}?</h3>
+                </header>
+                <div class="card-content hotel-page__inquiry-card-body">Share your dates and we’ll pass your request to the hotel team.</div>
+                <footer class="hotel-page__inquiry-card-footer">
+                    <a class="button is-secondary" href="{{ inquire_url }}">Make an inquiry →</a>
+                    <small>No payment is taken. Availability will be confirmed personally.</small>
+                </footer>
+            </article>
+        </div>
+    </section>
+    {% if rooms.len() > 0 %}
+    <section id="rooms" class="content-section hotel-page__anchor hotel-page__rooms">
+        <div class="app-container">
+            <p class="eyebrow">ROOMS &amp; SUITES</p>
+            <h2 class="section-title">Space to call your own</h2>
+            <div class="hotel-page__room-list">
+                {% for room in rooms %}
+                <article class="card hotel-room">
+                    <div class="hotel-room__image-wrap">
+                        <img class="hotel-room__image" src="{{ room.image }}" alt="{{ room.name }} at {{ name }}" width="560" height="440" loading="lazy" />
+                    </div>
+                    <div class="hotel-room__content">
+                        <header class="hotel-room__header">
+                            <h3 class="hotel-room__title">{{ room.name }}</h3>
+                            <p>{{ room.summary }}</p>
+                        </header>
+                        <div class="card-content hotel-room__body">
+                            <div class="hotel-room__facts">
+                                <span>Up to {{ room.max_guests }} guests</span>
+                                {% if room.size != "" %}<span>{{ room.size }}</span>{% endif %}
+                                <span>{{ room.bed }}</span>
+                            </div>
+                            {% if room.amenities.len() > 0 %}
+                            <div class="hotel-room__amenities">
+                                <strong>Room amenities</strong>
+                                <div>{% for amenity in room.amenities %}<span>{{ amenity }}</span>{% endfor %}</div>
+                            </div>
+                            {% endif %}
+                            {% if room.has_gallery %}<a class="button is-light hotel-room__gallery" href="#gallery">View hotel gallery ↑</a>{% endif %}
+                        </div>
+                        <footer class="hotel-room__footer">
+                            <span>From <strong>{{ room.price }}</strong> / night</span>
+                            <a class="button is-primary is-outlined hotel-room__inquire" href="{{ room.inquire }}">Inquire →</a>
+                        </footer>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% if amenity_groups.len() > 0 || facts.len() > 0 %}
+    <section id="facilities" class="content-section hotel-page__anchor hotel-facilities">
+        <div class="app-container">
+            <p class="eyebrow">FACILITIES &amp; FACTS</p>
+            <h2 class="section-title">Everything you need, clearly laid out</h2>
+            {% if description != "" %}
+            <div class="hotel-facilities__about"><h3>About this stay</h3><p>{{ description }}</p></div>
+            {% endif %}
+            {% if amenity_groups.len() > 0 %}
+            <div class="hotel-facilities__groups">
+                {% for group in amenity_groups %}
+                <div><h3>{{ group.name }}</h3><ul>{% for item in group.items %}<li><span>{{ item }}</span></li>{% endfor %}</ul></div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% if facts.len() > 0 %}
+            <dl class="hotel-facilities__facts">
+                {% for fact in facts %}<div><dt>{{ fact.label }}</dt><dd>{{ fact.value }}</dd></div>{% endfor %}
+            </dl>
+            {% endif %}
+        </div>
+    </section>
+    {% endif %}
+    <section id="location" class="content-section hotel-page__anchor hotel-location">
+        <div class="app-container hotel-location__layout">
+            <div>
+                <p class="eyebrow">LOCATION</p>
+                <h2 class="section-title">Step outside and explore</h2>
+                <p class="hotel-location__summary">{{ destination_summary }}</p>
+                <p class="hotel-location__address">{{ address }}, {{ destination_name }}, {{ country }}</p>
+                {% if map_url != "" %}<a class="hotel-location__map-link" href="{{ map_url }}" target="_blank" rel="noopener noreferrer">View on map ↗</a>{% endif %}
+            </div>
+            {% if nearby_groups.len() > 0 %}
+            <div class="hotel-location__places">
+                {% for group in nearby_groups %}
+                <article class="card hotel-location__card">
+                    <div class="card-content">
+                        <h3>{{ group.name }}</h3>
+                        <ul>
+                            {% for place in group.places %}
+                            <li><span>{{ place.name }}</span><span>{{ place.distance }}</span></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </section>
+    {% if policies.len() > 0 || faqs.len() > 0 %}
+    <section id="policies" class="content-section hotel-page__anchor hotel-policies">
+        <div class="app-container">
+            <p class="eyebrow">POLICIES &amp; FAQ</p>
+            <h2 class="section-title">The useful details</h2>
+            <div class="hotel-policies__layout">
+                {% if policies.len() > 0 %}
+                <div class="hotel-policies__column">
+                    <h3>Policies</h3>
+                    <div class="hotel-policies__cards">
+                        {% for group in policy_groups %}
+                        <article class="card hotel-policies__card">
+                            <div class="card-content">
+                                <h4>{{ group.name }}</h4>
+                                <ul>
+                                    {% for policy in group.policies %}
+                                    <li><strong>{{ policy.title }}</strong><p>{{ policy.description }}</p></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </article>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                {% if faqs.len() > 0 %}
+                <div class="hotel-policies__column">
+                    <h3>Frequently asked questions</h3>
+                    <div class="hotel-policies__faqs">
+                        {% for faq in faqs %}
+                        <div class="hotel-policies__faq"><details><summary>{{ faq.question }}</summary><p class="hotel-policies__answer">{{ faq.answer }}</p></details></div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% if show_reviews %}
+    <section id="reviews" class="content-section hotel-page__anchor hotel-reviews">
+        <div class="app-container">
+            <p class="eyebrow">GUEST IMPRESSIONS</p>
+            <h2 class="section-title">What stays with people</h2>
+            <div class="hotel-reviews__layout">
+                <div class="hotel-reviews__summary">
+                    <div>
+                        <div class="hotel-reviews__rating"><strong>{{ rating }}</strong><span>/ 5</span></div>
+                        <p>{{ review_count_label }}</p>
+                    </div>
+                    {% if scores.len() > 0 %}
+                    <div class="hotel-reviews__scores" aria-label="Review category scores">
+                        {% for score in scores %}
+                        <div>
+                            <div class="hotel-reviews__score-label"><span>{{ score.label }}</span><span>{{ score.score }} / 5</span></div>
+                            <div class="hotel-reviews__meter" role="meter" aria-label="{{ score.label }}: {{ score.score }} out of 5" aria-valuemin="0" aria-valuemax="5" aria-valuenow="{{ score.value }}"><div style="width: {{ score.width }}%"></div></div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% if reviews.len() > 0 %}
+                <div class="hotel-reviews__grid">
+                    {% for review in reviews %}
+                    <article class="card hotel-reviews__card">
+                        <div class="card-content">
+                            <div class="hotel-reviews__card-meta"><span>★ {{ review.rating }}</span><time datetime="{{ review.reviewed_at }}">{{ review.reviewed_at }}</time></div>
+                            <h3>{{ review.title }}</h3>
+                            <p>{{ review.body }}</p>
+                            <div class="hotel-reviews__guest">
+                                <p>{{ review.guest }}</p>
+                                <p>{{ review.stay }}</p>
+                                {% if review.room != "" %}<p>Room: {{ review.room }}</p>{% endif %}
+                            </div>
+                            {% if review.response != "" %}
+                            <div class="hotel-reviews__response"><strong>Property response</strong><p>{{ review.response }}</p></div>
+                            {% endif %}
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% if offer_cards.len() > 0 %}
+    <section class="content-section hotel-page__offers">
+        <div class="app-container">
+            <p class="eyebrow">OFFERS</p>
+            <h2 class="section-title">A little more from your stay</h2>
+            <div>{% for card in offer_cards %}{{ card|safe }}{% endfor %}</div>
+        </div>
+    </section>
+    {% endif %}
+</div>
+{% include "close.html" %}

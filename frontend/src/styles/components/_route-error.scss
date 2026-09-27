@@ -1,0 +1,80 @@
+@use '../abstracts' as *;
+
+.route-error {
+  display: grid;
+  min-height: 70vh;
+  place-items: center;
+  padding-block: 5rem;
+  text-align: center;
+}
+
+.route-error__content {
+  max-width: 42rem;
+}
+
+.route-error__icon {
+  display: grid;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.75rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--app-secondary);
+  color: var(--app-primary);
+}
+
+.route-error__icon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.route-error__code {
+  color: var(--app-primary);
+  font-family: $app-font-serif;
+  font-size: 4.5rem;
+}
+
+.route-error .eyebrow {
+  margin-top: 1.25rem;
+}
+
+.route-error__message {
+  max-width: 32rem;
+  margin: 1.5rem auto 0;
+  color: var(--app-muted-color);
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+.route-error__actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+}
+
+.route-error__details {
+  margin-top: 2.5rem;
+  padding: 1rem;
+  border: 1px solid var(--app-border);
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.route-error__details summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.route-error__details pre {
+  overflow: auto;
+  margin-top: 0.75rem;
+  color: var(--app-danger);
+  white-space: pre-wrap;
+}
+
+@media (width <= $app-sm) {
+  .route-error__actions {
+    flex-direction: column;
+  }
+}

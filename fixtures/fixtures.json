@@ -1,0 +1,3251 @@
+{
+  "heroImage": "/images/hero-1280.webp",
+  "destinationSeeds": [
+    {
+      "id": "dest-amalfi",
+      "name": "Amalfi Coast",
+      "country": "Italy",
+      "slug": "amalfi-coast",
+      "summary": "Cliffside villages, lemon-scented terraces, and quiet coves along Italy’s most cinematic coastline."
+    },
+    {
+      "id": "dest-kyoto",
+      "name": "Kyoto",
+      "country": "Japan",
+      "slug": "kyoto",
+      "summary": "Temple gardens, intimate machiya stays, and a slower rhythm shaped by craft and season."
+    },
+    {
+      "id": "dest-bali",
+      "name": "Bali",
+      "country": "Indonesia",
+      "slug": "bali",
+      "summary": "Jungle hideaways and ocean retreats connected by food, ritual, and remarkable design."
+    },
+    {
+      "id": "dest-cape",
+      "name": "Cape Town",
+      "country": "South Africa",
+      "slug": "cape-town",
+      "summary": "Mountain-framed city stays, winelands escapes, and wild Atlantic horizons."
+    },
+    {
+      "id": "dest-yucatan",
+      "name": "Yucatán",
+      "country": "Mexico",
+      "slug": "yucatan",
+      "summary": "Restored haciendas, cenotes, and contemporary stays rooted in Mayan heritage."
+    },
+    {
+      "id": "dest-cyclades",
+      "name": "The Cyclades",
+      "country": "Greece",
+      "slug": "cyclades",
+      "summary": "Whitewashed island houses, volcanic beaches, and elemental Aegean calm."
+    },
+    {
+      "id": "dest-bengaluru",
+      "name": "Bengaluru",
+      "country": "India",
+      "slug": "bengaluru",
+      "summary": "Tree-lined neighborhoods, independent kitchens, design studios, and easy metro links across India’s garden city."
+    }
+  ],
+  "hotelSeeds": [
+    {
+      "id": "hotel-1-1",
+      "destinationId": "dest-amalfi",
+      "name": "Casa Aurelia",
+      "slug": "casa-aurelia",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, Amalfi Coast",
+      "summary": "A considered stay in Amalfi Coast, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 220,
+      "currency": "USD",
+      "latitude": 40,
+      "longitude": 12,
+      "seoTitle": "Casa Aurelia — Amalfi Coast hotel",
+      "seoDescription": "Discover Casa Aurelia, rooms, offers, amenities, and trip inspiration in Amalfi Coast.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-2",
+      "destinationId": "dest-amalfi",
+      "name": "The Lemon House",
+      "slug": "the-lemon-house",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, Amalfi Coast",
+      "summary": "A considered stay in Amalfi Coast, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 290,
+      "currency": "USD",
+      "latitude": 40,
+      "longitude": 12,
+      "seoTitle": "The Lemon House — Amalfi Coast hotel",
+      "seoDescription": "Discover The Lemon House, rooms, offers, amenities, and trip inspiration in Amalfi Coast.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-3",
+      "destinationId": "dest-amalfi",
+      "name": "Mare Alta",
+      "slug": "mare-alta",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, Amalfi Coast",
+      "summary": "A considered stay in Amalfi Coast, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 360,
+      "currency": "USD",
+      "latitude": 40,
+      "longitude": 12,
+      "seoTitle": "Mare Alta — Amalfi Coast hotel",
+      "seoDescription": "Discover Mare Alta, rooms, offers, amenities, and trip inspiration in Amalfi Coast.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-1",
+      "destinationId": "dest-kyoto",
+      "name": "Hikari House",
+      "slug": "hikari-house",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, Kyoto",
+      "summary": "A considered stay in Kyoto, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 255,
+      "currency": "USD",
+      "latitude": 41,
+      "longitude": 13,
+      "seoTitle": "Hikari House — Kyoto hotel",
+      "seoDescription": "Discover Hikari House, rooms, offers, amenities, and trip inspiration in Kyoto.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-2",
+      "destinationId": "dest-kyoto",
+      "name": "Gion Atelier",
+      "slug": "gion-atelier",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, Kyoto",
+      "summary": "A considered stay in Kyoto, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 325,
+      "currency": "USD",
+      "latitude": 41,
+      "longitude": 13,
+      "seoTitle": "Gion Atelier — Kyoto hotel",
+      "seoDescription": "Discover Gion Atelier, rooms, offers, amenities, and trip inspiration in Kyoto.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-3",
+      "destinationId": "dest-kyoto",
+      "name": "Tsuki Ryokan",
+      "slug": "tsuki-ryokan",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, Kyoto",
+      "summary": "A considered stay in Kyoto, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 395,
+      "currency": "USD",
+      "latitude": 41,
+      "longitude": 13,
+      "seoTitle": "Tsuki Ryokan — Kyoto hotel",
+      "seoDescription": "Discover Tsuki Ryokan, rooms, offers, amenities, and trip inspiration in Kyoto.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-1",
+      "destinationId": "dest-bali",
+      "name": "Uma Verde",
+      "slug": "uma-verde",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, Bali",
+      "summary": "A considered stay in Bali, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 290,
+      "currency": "USD",
+      "latitude": 42,
+      "longitude": 14,
+      "seoTitle": "Uma Verde — Bali hotel",
+      "seoDescription": "Discover Uma Verde, rooms, offers, amenities, and trip inspiration in Bali.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-2",
+      "destinationId": "dest-bali",
+      "name": "Tide House",
+      "slug": "tide-house",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, Bali",
+      "summary": "A considered stay in Bali, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 360,
+      "currency": "USD",
+      "latitude": 42,
+      "longitude": 14,
+      "seoTitle": "Tide House — Bali hotel",
+      "seoDescription": "Discover Tide House, rooms, offers, amenities, and trip inspiration in Bali.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-3",
+      "destinationId": "dest-bali",
+      "name": "Canopy Ubud",
+      "slug": "canopy-ubud",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, Bali",
+      "summary": "A considered stay in Bali, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 430,
+      "currency": "USD",
+      "latitude": 42,
+      "longitude": 14,
+      "seoTitle": "Canopy Ubud — Bali hotel",
+      "seoDescription": "Discover Canopy Ubud, rooms, offers, amenities, and trip inspiration in Bali.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-1",
+      "destinationId": "dest-cape",
+      "name": "Lion’s Head House",
+      "slug": "lion-s-head-house",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, Cape Town",
+      "summary": "A considered stay in Cape Town, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 325,
+      "currency": "USD",
+      "latitude": 43,
+      "longitude": 15,
+      "seoTitle": "Lion’s Head House — Cape Town hotel",
+      "seoDescription": "Discover Lion’s Head House, rooms, offers, amenities, and trip inspiration in Cape Town.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-2",
+      "destinationId": "dest-cape",
+      "name": "Atlantic Nook",
+      "slug": "atlantic-nook",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, Cape Town",
+      "summary": "A considered stay in Cape Town, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 395,
+      "currency": "USD",
+      "latitude": 43,
+      "longitude": 15,
+      "seoTitle": "Atlantic Nook — Cape Town hotel",
+      "seoDescription": "Discover Atlantic Nook, rooms, offers, amenities, and trip inspiration in Cape Town.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-3",
+      "destinationId": "dest-cape",
+      "name": "Vine & Stone",
+      "slug": "vine-stone",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, Cape Town",
+      "summary": "A considered stay in Cape Town, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 465,
+      "currency": "USD",
+      "latitude": 43,
+      "longitude": 15,
+      "seoTitle": "Vine & Stone — Cape Town hotel",
+      "seoDescription": "Discover Vine & Stone, rooms, offers, amenities, and trip inspiration in Cape Town.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-1",
+      "destinationId": "dest-yucatan",
+      "name": "Hacienda Cielo",
+      "slug": "hacienda-cielo",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, Yucatán",
+      "summary": "A considered stay in Yucatán, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 360,
+      "currency": "USD",
+      "latitude": 44,
+      "longitude": 16,
+      "seoTitle": "Hacienda Cielo — Yucatán hotel",
+      "seoDescription": "Discover Hacienda Cielo, rooms, offers, amenities, and trip inspiration in Yucatán.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-2",
+      "destinationId": "dest-yucatan",
+      "name": "Casa Cenote",
+      "slug": "casa-cenote",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, Yucatán",
+      "summary": "A considered stay in Yucatán, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 430,
+      "currency": "USD",
+      "latitude": 44,
+      "longitude": 16,
+      "seoTitle": "Casa Cenote — Yucatán hotel",
+      "seoDescription": "Discover Casa Cenote, rooms, offers, amenities, and trip inspiration in Yucatán.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-3",
+      "destinationId": "dest-yucatan",
+      "name": "Mérida Modern",
+      "slug": "merida-modern",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, Yucatán",
+      "summary": "A considered stay in Yucatán, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 500,
+      "currency": "USD",
+      "latitude": 44,
+      "longitude": 16,
+      "seoTitle": "Mérida Modern — Yucatán hotel",
+      "seoDescription": "Discover Mérida Modern, rooms, offers, amenities, and trip inspiration in Yucatán.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-1",
+      "destinationId": "dest-cyclades",
+      "name": "Aegean House",
+      "slug": "aegean-house",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, The Cyclades",
+      "summary": "A considered stay in The Cyclades, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 395,
+      "currency": "USD",
+      "latitude": 45,
+      "longitude": 17,
+      "seoTitle": "Aegean House — The Cyclades hotel",
+      "seoDescription": "Discover Aegean House, rooms, offers, amenities, and trip inspiration in The Cyclades.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-2",
+      "destinationId": "dest-cyclades",
+      "name": "Caldera Quiet",
+      "slug": "caldera-quiet",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, The Cyclades",
+      "summary": "A considered stay in The Cyclades, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 465,
+      "currency": "USD",
+      "latitude": 45,
+      "longitude": 17,
+      "seoTitle": "Caldera Quiet — The Cyclades hotel",
+      "seoDescription": "Discover Caldera Quiet, rooms, offers, amenities, and trip inspiration in The Cyclades.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-3",
+      "destinationId": "dest-cyclades",
+      "name": "Paros Field",
+      "slug": "paros-field",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, The Cyclades",
+      "summary": "A considered stay in The Cyclades, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 535,
+      "currency": "USD",
+      "latitude": 45,
+      "longitude": 17,
+      "seoTitle": "Paros Field — The Cyclades hotel",
+      "seoDescription": "Discover Paros Field, rooms, offers, amenities, and trip inspiration in The Cyclades.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-bengaluru-jayanagar",
+      "destinationId": "dest-bengaluru",
+      "name": "Jayanagar Common House",
+      "slug": "jayanagar-common-house",
+      "propertyType": "Design hostel",
+      "address": "11th Main Road, Jayanagar, Bengaluru, Karnataka 560041, India",
+      "summary": "A bright, sociable base in leafy Jayanagar, pairing calm private rooms and thoughtful dorms with easy access to Bengaluru by metro.",
+      "description": "Colorful shared lounges make it easy to meet fellow travelers, while quiet air-conditioned rooms give each day a restful ending. Practical details—secure lockers, an always-open front desk, laundry, and neighborhood guidance—keep longer stays simple.",
+      "heroImage": "/images/hotel-lounge.webp",
+      "rating": 4.6,
+      "starRating": 3,
+      "reviewCount": 128,
+      "priceFrom": 1299,
+      "currency": "INR",
+      "latitude": 12.925,
+      "longitude": 77.5838,
+      "seoTitle": "Jayanagar Common House — Bengaluru design hostel",
+      "seoDescription": "Explore private rooms, dorms, facilities, neighborhood highlights, policies, and guest impressions at Jayanagar Common House in Bengaluru.",
+      "status": "published"
+    }
+  ],
+  "generatedHotelSeeds": [
+    {
+      "id": "hotel-1-1",
+      "destinationId": "dest-amalfi",
+      "name": "Casa Aurelia",
+      "slug": "casa-aurelia",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, Amalfi Coast",
+      "summary": "A considered stay in Amalfi Coast, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 220,
+      "currency": "USD",
+      "latitude": 40,
+      "longitude": 12,
+      "seoTitle": "Casa Aurelia — Amalfi Coast hotel",
+      "seoDescription": "Discover Casa Aurelia, rooms, offers, amenities, and trip inspiration in Amalfi Coast.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-2",
+      "destinationId": "dest-amalfi",
+      "name": "The Lemon House",
+      "slug": "the-lemon-house",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, Amalfi Coast",
+      "summary": "A considered stay in Amalfi Coast, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 290,
+      "currency": "USD",
+      "latitude": 40,
+      "longitude": 12,
+      "seoTitle": "The Lemon House — Amalfi Coast hotel",
+      "seoDescription": "Discover The Lemon House, rooms, offers, amenities, and trip inspiration in Amalfi Coast.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-3",
+      "destinationId": "dest-amalfi",
+      "name": "Mare Alta",
+      "slug": "mare-alta",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, Amalfi Coast",
+      "summary": "A considered stay in Amalfi Coast, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 360,
+      "currency": "USD",
+      "latitude": 40,
+      "longitude": 12,
+      "seoTitle": "Mare Alta — Amalfi Coast hotel",
+      "seoDescription": "Discover Mare Alta, rooms, offers, amenities, and trip inspiration in Amalfi Coast.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-1",
+      "destinationId": "dest-kyoto",
+      "name": "Hikari House",
+      "slug": "hikari-house",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, Kyoto",
+      "summary": "A considered stay in Kyoto, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 255,
+      "currency": "USD",
+      "latitude": 41,
+      "longitude": 13,
+      "seoTitle": "Hikari House — Kyoto hotel",
+      "seoDescription": "Discover Hikari House, rooms, offers, amenities, and trip inspiration in Kyoto.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-2",
+      "destinationId": "dest-kyoto",
+      "name": "Gion Atelier",
+      "slug": "gion-atelier",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, Kyoto",
+      "summary": "A considered stay in Kyoto, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 325,
+      "currency": "USD",
+      "latitude": 41,
+      "longitude": 13,
+      "seoTitle": "Gion Atelier — Kyoto hotel",
+      "seoDescription": "Discover Gion Atelier, rooms, offers, amenities, and trip inspiration in Kyoto.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-3",
+      "destinationId": "dest-kyoto",
+      "name": "Tsuki Ryokan",
+      "slug": "tsuki-ryokan",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, Kyoto",
+      "summary": "A considered stay in Kyoto, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 395,
+      "currency": "USD",
+      "latitude": 41,
+      "longitude": 13,
+      "seoTitle": "Tsuki Ryokan — Kyoto hotel",
+      "seoDescription": "Discover Tsuki Ryokan, rooms, offers, amenities, and trip inspiration in Kyoto.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-1",
+      "destinationId": "dest-bali",
+      "name": "Uma Verde",
+      "slug": "uma-verde",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, Bali",
+      "summary": "A considered stay in Bali, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 290,
+      "currency": "USD",
+      "latitude": 42,
+      "longitude": 14,
+      "seoTitle": "Uma Verde — Bali hotel",
+      "seoDescription": "Discover Uma Verde, rooms, offers, amenities, and trip inspiration in Bali.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-2",
+      "destinationId": "dest-bali",
+      "name": "Tide House",
+      "slug": "tide-house",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, Bali",
+      "summary": "A considered stay in Bali, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 360,
+      "currency": "USD",
+      "latitude": 42,
+      "longitude": 14,
+      "seoTitle": "Tide House — Bali hotel",
+      "seoDescription": "Discover Tide House, rooms, offers, amenities, and trip inspiration in Bali.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-3",
+      "destinationId": "dest-bali",
+      "name": "Canopy Ubud",
+      "slug": "canopy-ubud",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, Bali",
+      "summary": "A considered stay in Bali, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 430,
+      "currency": "USD",
+      "latitude": 42,
+      "longitude": 14,
+      "seoTitle": "Canopy Ubud — Bali hotel",
+      "seoDescription": "Discover Canopy Ubud, rooms, offers, amenities, and trip inspiration in Bali.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-1",
+      "destinationId": "dest-cape",
+      "name": "Lion’s Head House",
+      "slug": "lion-s-head-house",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, Cape Town",
+      "summary": "A considered stay in Cape Town, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 325,
+      "currency": "USD",
+      "latitude": 43,
+      "longitude": 15,
+      "seoTitle": "Lion’s Head House — Cape Town hotel",
+      "seoDescription": "Discover Lion’s Head House, rooms, offers, amenities, and trip inspiration in Cape Town.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-2",
+      "destinationId": "dest-cape",
+      "name": "Atlantic Nook",
+      "slug": "atlantic-nook",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, Cape Town",
+      "summary": "A considered stay in Cape Town, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 395,
+      "currency": "USD",
+      "latitude": 43,
+      "longitude": 15,
+      "seoTitle": "Atlantic Nook — Cape Town hotel",
+      "seoDescription": "Discover Atlantic Nook, rooms, offers, amenities, and trip inspiration in Cape Town.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-3",
+      "destinationId": "dest-cape",
+      "name": "Vine & Stone",
+      "slug": "vine-stone",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, Cape Town",
+      "summary": "A considered stay in Cape Town, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 465,
+      "currency": "USD",
+      "latitude": 43,
+      "longitude": 15,
+      "seoTitle": "Vine & Stone — Cape Town hotel",
+      "seoDescription": "Discover Vine & Stone, rooms, offers, amenities, and trip inspiration in Cape Town.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-1",
+      "destinationId": "dest-yucatan",
+      "name": "Hacienda Cielo",
+      "slug": "hacienda-cielo",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, Yucatán",
+      "summary": "A considered stay in Yucatán, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 360,
+      "currency": "USD",
+      "latitude": 44,
+      "longitude": 16,
+      "seoTitle": "Hacienda Cielo — Yucatán hotel",
+      "seoDescription": "Discover Hacienda Cielo, rooms, offers, amenities, and trip inspiration in Yucatán.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-2",
+      "destinationId": "dest-yucatan",
+      "name": "Casa Cenote",
+      "slug": "casa-cenote",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, Yucatán",
+      "summary": "A considered stay in Yucatán, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 430,
+      "currency": "USD",
+      "latitude": 44,
+      "longitude": 16,
+      "seoTitle": "Casa Cenote — Yucatán hotel",
+      "seoDescription": "Discover Casa Cenote, rooms, offers, amenities, and trip inspiration in Yucatán.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-3",
+      "destinationId": "dest-yucatan",
+      "name": "Mérida Modern",
+      "slug": "merida-modern",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, Yucatán",
+      "summary": "A considered stay in Yucatán, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 500,
+      "currency": "USD",
+      "latitude": 44,
+      "longitude": 16,
+      "seoTitle": "Mérida Modern — Yucatán hotel",
+      "seoDescription": "Discover Mérida Modern, rooms, offers, amenities, and trip inspiration in Yucatán.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-1",
+      "destinationId": "dest-cyclades",
+      "name": "Aegean House",
+      "slug": "aegean-house",
+      "propertyType": "Design hotel",
+      "address": "12 Seaward Lane, The Cyclades",
+      "summary": "A considered stay in The Cyclades, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.6,
+      "priceFrom": 395,
+      "currency": "USD",
+      "latitude": 45,
+      "longitude": 17,
+      "seoTitle": "Aegean House — The Cyclades hotel",
+      "seoDescription": "Discover Aegean House, rooms, offers, amenities, and trip inspiration in The Cyclades.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-2",
+      "destinationId": "dest-cyclades",
+      "name": "Caldera Quiet",
+      "slug": "caldera-quiet",
+      "propertyType": "Boutique retreat",
+      "address": "13 Seaward Lane, The Cyclades",
+      "summary": "A considered stay in The Cyclades, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.699999999999999,
+      "priceFrom": 465,
+      "currency": "USD",
+      "latitude": 45,
+      "longitude": 17,
+      "seoTitle": "Caldera Quiet — The Cyclades hotel",
+      "seoDescription": "Discover Caldera Quiet, rooms, offers, amenities, and trip inspiration in The Cyclades.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-3",
+      "destinationId": "dest-cyclades",
+      "name": "Paros Field",
+      "slug": "paros-field",
+      "propertyType": "Private hideaway",
+      "address": "14 Seaward Lane, The Cyclades",
+      "summary": "A considered stay in The Cyclades, pairing a strong sense of place with quietly attentive service.",
+      "description": "Natural materials, generous light, and locally rooted cooking shape a stay designed around unhurried days. Every room is individual, with thoughtful details and space to settle in.",
+      "heroImage": "/images/hero-1280.webp",
+      "rating": 4.8,
+      "priceFrom": 535,
+      "currency": "USD",
+      "latitude": 45,
+      "longitude": 17,
+      "seoTitle": "Paros Field — The Cyclades hotel",
+      "seoDescription": "Discover Paros Field, rooms, offers, amenities, and trip inspiration in The Cyclades.",
+      "status": "published"
+    }
+  ],
+  "amenitySeeds": [
+    {
+      "id": "amenity-1",
+      "name": "Breakfast included",
+      "icon": "check",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-2",
+      "name": "Pool",
+      "icon": "waves",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-3",
+      "name": "Spa",
+      "icon": "sparkles",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-4",
+      "name": "Airport transfer",
+      "icon": "check",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-5",
+      "name": "Fast Wi-Fi",
+      "icon": "check",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-6",
+      "name": "Ocean view",
+      "icon": "check",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-7",
+      "name": "Private terrace",
+      "icon": "check",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-8",
+      "name": "Workspace",
+      "icon": "check",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-9",
+      "name": "Restaurant",
+      "icon": "check",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-10",
+      "name": "Bar & lounge",
+      "icon": "check",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-11",
+      "name": "Gym",
+      "icon": "check",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-12",
+      "name": "Garden",
+      "icon": "check",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-13",
+      "name": "Terrace",
+      "icon": "check",
+      "appliesTo": "both"
+    },
+    {
+      "id": "amenity-english",
+      "name": "English",
+      "category": "languages",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-hindi",
+      "name": "Hindi",
+      "category": "languages",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-free-wifi",
+      "name": "Free Wi-Fi",
+      "category": "internet",
+      "appliesTo": "both",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-game-room",
+      "name": "Game room",
+      "category": "recreation",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-entertainment",
+      "name": "On-site entertainment",
+      "category": "recreation",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-laundry",
+      "name": "Laundry service",
+      "category": "services",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-smoke-free",
+      "name": "Smoke-free property",
+      "category": "services",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-cctv",
+      "name": "CCTV in common areas",
+      "category": "access",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-fire-extinguisher",
+      "name": "Fire extinguisher",
+      "category": "access",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-front-desk-24h",
+      "name": "24-hour front desk",
+      "category": "access",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-pet-friendly",
+      "name": "Pet-friendly with charges",
+      "category": "services",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-security-24h",
+      "name": "24-hour security",
+      "category": "access",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-air-conditioning",
+      "name": "Air conditioning",
+      "category": "room",
+      "appliesTo": "room",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-ensuite-bathroom",
+      "name": "Ensuite bathroom",
+      "category": "room",
+      "appliesTo": "room",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-personal-locker",
+      "name": "Personal locker",
+      "category": "room",
+      "appliesTo": "room",
+      "icon": "check"
+    }
+  ],
+  "bengaluruAmenitySeeds": [
+    {
+      "id": "amenity-english",
+      "name": "English",
+      "category": "languages",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-hindi",
+      "name": "Hindi",
+      "category": "languages",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-free-wifi",
+      "name": "Free Wi-Fi",
+      "category": "internet",
+      "appliesTo": "both",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-game-room",
+      "name": "Game room",
+      "category": "recreation",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-entertainment",
+      "name": "On-site entertainment",
+      "category": "recreation",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-laundry",
+      "name": "Laundry service",
+      "category": "services",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-smoke-free",
+      "name": "Smoke-free property",
+      "category": "services",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-cctv",
+      "name": "CCTV in common areas",
+      "category": "access",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-fire-extinguisher",
+      "name": "Fire extinguisher",
+      "category": "access",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-front-desk-24h",
+      "name": "24-hour front desk",
+      "category": "access",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-pet-friendly",
+      "name": "Pet-friendly with charges",
+      "category": "services",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-security-24h",
+      "name": "24-hour security",
+      "category": "access",
+      "appliesTo": "hotel",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-air-conditioning",
+      "name": "Air conditioning",
+      "category": "room",
+      "appliesTo": "room",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-ensuite-bathroom",
+      "name": "Ensuite bathroom",
+      "category": "room",
+      "appliesTo": "room",
+      "icon": "check"
+    },
+    {
+      "id": "amenity-personal-locker",
+      "name": "Personal locker",
+      "category": "room",
+      "appliesTo": "room",
+      "icon": "check"
+    }
+  ],
+  "roomSeeds": [
+    {
+      "id": "hotel-1-1-room-1",
+      "hotelId": "hotel-1-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 220,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-1-room-2",
+      "hotelId": "hotel-1-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 380,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-2-room-1",
+      "hotelId": "hotel-1-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 290,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-2-room-2",
+      "hotelId": "hotel-1-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 450,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-3-room-1",
+      "hotelId": "hotel-1-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 360,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-3-room-2",
+      "hotelId": "hotel-1-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 520,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-1-room-1",
+      "hotelId": "hotel-2-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 255,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-1-room-2",
+      "hotelId": "hotel-2-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 415,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-2-room-1",
+      "hotelId": "hotel-2-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 325,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-2-room-2",
+      "hotelId": "hotel-2-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 485,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-3-room-1",
+      "hotelId": "hotel-2-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 395,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-3-room-2",
+      "hotelId": "hotel-2-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 555,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-1-room-1",
+      "hotelId": "hotel-3-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 290,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-1-room-2",
+      "hotelId": "hotel-3-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 450,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-2-room-1",
+      "hotelId": "hotel-3-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 360,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-2-room-2",
+      "hotelId": "hotel-3-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 520,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-3-room-1",
+      "hotelId": "hotel-3-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 430,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-3-room-2",
+      "hotelId": "hotel-3-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 590,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-1-room-1",
+      "hotelId": "hotel-4-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 325,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-1-room-2",
+      "hotelId": "hotel-4-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 485,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-2-room-1",
+      "hotelId": "hotel-4-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 395,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-2-room-2",
+      "hotelId": "hotel-4-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 555,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-3-room-1",
+      "hotelId": "hotel-4-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 465,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-3-room-2",
+      "hotelId": "hotel-4-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 625,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-1-room-1",
+      "hotelId": "hotel-5-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 360,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-1-room-2",
+      "hotelId": "hotel-5-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 520,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-2-room-1",
+      "hotelId": "hotel-5-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 430,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-2-room-2",
+      "hotelId": "hotel-5-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 590,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-3-room-1",
+      "hotelId": "hotel-5-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 500,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-3-room-2",
+      "hotelId": "hotel-5-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 660,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-1-room-1",
+      "hotelId": "hotel-6-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 395,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-1-room-2",
+      "hotelId": "hotel-6-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 555,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-2-room-1",
+      "hotelId": "hotel-6-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 465,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-2-room-2",
+      "hotelId": "hotel-6-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 625,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-3-room-1",
+      "hotelId": "hotel-6-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 535,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-3-room-2",
+      "hotelId": "hotel-6-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 695,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-bengaluru-female-dorm",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "name": "Bed in 6-bed women’s ensuite dorm",
+      "slug": "female-ensuite-dorm",
+      "summary": "A women-only air-conditioned dorm with privacy curtains, a personal locker, and an ensuite bathroom.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 1499,
+      "maxGuests": 6,
+      "sizeSqm": 28,
+      "bed": "Single bunk bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-bengaluru-mixed-upper",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "name": "Upper bed in 6-bed mixed ensuite dorm",
+      "slug": "mixed-dorm-upper",
+      "summary": "An upper bunk in a sociable air-conditioned dorm with secure storage and an ensuite bathroom.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 1299,
+      "maxGuests": 6,
+      "sizeSqm": 30,
+      "bed": "Upper single bunk",
+      "status": "published"
+    },
+    {
+      "id": "hotel-bengaluru-mixed-lower",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "name": "Lower bed in 6-bed mixed ensuite dorm",
+      "slug": "mixed-dorm-lower",
+      "summary": "A lower bunk with a privacy curtain, reading light, secure locker, and ensuite bathroom.",
+      "image": "/images/hotel-garden.webp",
+      "priceFrom": 1399,
+      "maxGuests": 6,
+      "sizeSqm": 30,
+      "bed": "Lower single bunk",
+      "status": "published"
+    },
+    {
+      "id": "hotel-bengaluru-private-queen",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "name": "Private queen room with ensuite",
+      "slug": "private-queen-ensuite",
+      "summary": "A quiet air-conditioned private room for two with a queen bed and ensuite bathroom.",
+      "image": "/images/hotel-lounge.webp",
+      "priceFrom": 4299,
+      "maxGuests": 2,
+      "sizeSqm": 22,
+      "bed": "Queen bed",
+      "status": "published"
+    }
+  ],
+  "generatedRoomSeeds": [
+    {
+      "id": "hotel-1-1-room-1",
+      "hotelId": "hotel-1-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 220,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-1-room-2",
+      "hotelId": "hotel-1-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 380,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-2-room-1",
+      "hotelId": "hotel-1-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 290,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-2-room-2",
+      "hotelId": "hotel-1-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 450,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-3-room-1",
+      "hotelId": "hotel-1-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 360,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-3-room-2",
+      "hotelId": "hotel-1-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 520,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-1-room-1",
+      "hotelId": "hotel-2-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 255,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-1-room-2",
+      "hotelId": "hotel-2-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 415,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-2-room-1",
+      "hotelId": "hotel-2-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 325,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-2-room-2",
+      "hotelId": "hotel-2-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 485,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-3-room-1",
+      "hotelId": "hotel-2-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 395,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-3-room-2",
+      "hotelId": "hotel-2-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 555,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-1-room-1",
+      "hotelId": "hotel-3-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 290,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-1-room-2",
+      "hotelId": "hotel-3-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 450,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-2-room-1",
+      "hotelId": "hotel-3-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 360,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-2-room-2",
+      "hotelId": "hotel-3-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 520,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-3-room-1",
+      "hotelId": "hotel-3-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 430,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-3-room-2",
+      "hotelId": "hotel-3-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 590,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-1-room-1",
+      "hotelId": "hotel-4-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 325,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-1-room-2",
+      "hotelId": "hotel-4-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 485,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-2-room-1",
+      "hotelId": "hotel-4-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 395,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-2-room-2",
+      "hotelId": "hotel-4-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 555,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-3-room-1",
+      "hotelId": "hotel-4-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 465,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-3-room-2",
+      "hotelId": "hotel-4-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 625,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-1-room-1",
+      "hotelId": "hotel-5-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 360,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-1-room-2",
+      "hotelId": "hotel-5-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 520,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-2-room-1",
+      "hotelId": "hotel-5-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 430,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-2-room-2",
+      "hotelId": "hotel-5-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 590,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-3-room-1",
+      "hotelId": "hotel-5-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 500,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-3-room-2",
+      "hotelId": "hotel-5-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 660,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-1-room-1",
+      "hotelId": "hotel-6-1",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 395,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-1-room-2",
+      "hotelId": "hotel-6-1",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 555,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-2-room-1",
+      "hotelId": "hotel-6-2",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 465,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-2-room-2",
+      "hotelId": "hotel-6-2",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 625,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-3-room-1",
+      "hotelId": "hotel-6-3",
+      "name": "Terrace King",
+      "slug": "terrace-king",
+      "summary": "A calm king room opening to a private furnished terrace.",
+      "image": "/images/hotel-terrace.webp",
+      "priceFrom": 535,
+      "maxGuests": 2,
+      "sizeSqm": 38,
+      "bed": "King bed",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-3-room-2",
+      "hotelId": "hotel-6-3",
+      "name": "Horizon Suite",
+      "slug": "horizon-suite",
+      "summary": "A generous suite with separate living space and long views.",
+      "image": "/images/hotel-building.webp",
+      "priceFrom": 695,
+      "maxGuests": 3,
+      "sizeSqm": 62,
+      "bed": "King bed and daybed",
+      "status": "published"
+    }
+  ],
+  "offerSeeds": [
+    {
+      "id": "hotel-1-1-offer",
+      "hotelId": "hotel-1-1",
+      "title": "Slow season escape",
+      "slug": "signature-offer",
+      "summary": "Daily breakfast, a welcome ritual, and 15% off your stay.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 15,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-2-offer",
+      "hotelId": "hotel-1-2",
+      "title": "Stay a little longer",
+      "slug": "signature-offer",
+      "summary": "Stay four nights and enjoy the fourth night with our compliments.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 25,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-1-3-offer",
+      "hotelId": "hotel-1-3",
+      "title": "Slow season escape",
+      "slug": "signature-offer",
+      "summary": "Daily breakfast, a welcome ritual, and 15% off your stay.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 15,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-1-offer",
+      "hotelId": "hotel-2-1",
+      "title": "Stay a little longer",
+      "slug": "signature-offer",
+      "summary": "Stay four nights and enjoy the fourth night with our compliments.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 25,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-2-offer",
+      "hotelId": "hotel-2-2",
+      "title": "Slow season escape",
+      "slug": "signature-offer",
+      "summary": "Daily breakfast, a welcome ritual, and 15% off your stay.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 15,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-2-3-offer",
+      "hotelId": "hotel-2-3",
+      "title": "Stay a little longer",
+      "slug": "signature-offer",
+      "summary": "Stay four nights and enjoy the fourth night with our compliments.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 25,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-1-offer",
+      "hotelId": "hotel-3-1",
+      "title": "Slow season escape",
+      "slug": "signature-offer",
+      "summary": "Daily breakfast, a welcome ritual, and 15% off your stay.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 15,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-2-offer",
+      "hotelId": "hotel-3-2",
+      "title": "Stay a little longer",
+      "slug": "signature-offer",
+      "summary": "Stay four nights and enjoy the fourth night with our compliments.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 25,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-3-3-offer",
+      "hotelId": "hotel-3-3",
+      "title": "Slow season escape",
+      "slug": "signature-offer",
+      "summary": "Daily breakfast, a welcome ritual, and 15% off your stay.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 15,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-1-offer",
+      "hotelId": "hotel-4-1",
+      "title": "Stay a little longer",
+      "slug": "signature-offer",
+      "summary": "Stay four nights and enjoy the fourth night with our compliments.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 25,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-2-offer",
+      "hotelId": "hotel-4-2",
+      "title": "Slow season escape",
+      "slug": "signature-offer",
+      "summary": "Daily breakfast, a welcome ritual, and 15% off your stay.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 15,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-4-3-offer",
+      "hotelId": "hotel-4-3",
+      "title": "Stay a little longer",
+      "slug": "signature-offer",
+      "summary": "Stay four nights and enjoy the fourth night with our compliments.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 25,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-1-offer",
+      "hotelId": "hotel-5-1",
+      "title": "Slow season escape",
+      "slug": "signature-offer",
+      "summary": "Daily breakfast, a welcome ritual, and 15% off your stay.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 15,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-2-offer",
+      "hotelId": "hotel-5-2",
+      "title": "Stay a little longer",
+      "slug": "signature-offer",
+      "summary": "Stay four nights and enjoy the fourth night with our compliments.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 25,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-5-3-offer",
+      "hotelId": "hotel-5-3",
+      "title": "Slow season escape",
+      "slug": "signature-offer",
+      "summary": "Daily breakfast, a welcome ritual, and 15% off your stay.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 15,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-1-offer",
+      "hotelId": "hotel-6-1",
+      "title": "Stay a little longer",
+      "slug": "signature-offer",
+      "summary": "Stay four nights and enjoy the fourth night with our compliments.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 25,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-2-offer",
+      "hotelId": "hotel-6-2",
+      "title": "Slow season escape",
+      "slug": "signature-offer",
+      "summary": "Daily breakfast, a welcome ritual, and 15% off your stay.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 15,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    },
+    {
+      "id": "hotel-6-3-offer",
+      "hotelId": "hotel-6-3",
+      "title": "Stay a little longer",
+      "slug": "signature-offer",
+      "summary": "Stay four nights and enjoy the fourth night with our compliments.",
+      "image": "/images/hero-1280.webp",
+      "discountPercent": 25,
+      "validFrom": "2026-09-01",
+      "validTo": "2027-06-30",
+      "terms": "Subject to availability. Blackout dates may apply.",
+      "status": "published"
+    }
+  ],
+  "hotelGalleryImageSeeds": [
+    {
+      "id": "hotel-bengaluru-gallery-1",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "roomId": null,
+      "src": "/images/hotel-lounge.webp",
+      "alt": "Colorful shared lounge at Jayanagar Common House",
+      "caption": "The Common Room",
+      "category": "property",
+      "sortOrder": 0
+    },
+    {
+      "id": "hotel-bengaluru-gallery-2",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "roomId": "hotel-bengaluru-female-dorm",
+      "src": "/images/hotel-terrace.webp",
+      "alt": "Women’s ensuite dorm with curtained bunks",
+      "caption": "Women’s ensuite dorm",
+      "category": "rooms",
+      "sortOrder": 1
+    },
+    {
+      "id": "hotel-bengaluru-gallery-3",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "roomId": "hotel-bengaluru-private-queen",
+      "src": "/images/hotel-building.webp",
+      "alt": "Private queen room with ensuite bathroom",
+      "caption": "Private queen room",
+      "category": "rooms",
+      "sortOrder": 2
+    },
+    {
+      "id": "hotel-bengaluru-gallery-4",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "roomId": null,
+      "src": "/images/hotel-garden.webp",
+      "alt": "Shared seating for work and conversation",
+      "caption": "Shared workspace",
+      "category": "facilities",
+      "sortOrder": 3
+    },
+    {
+      "id": "hotel-bengaluru-gallery-5",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "roomId": null,
+      "src": "/images/hotel-pool.webp",
+      "alt": "Games and recreation area",
+      "caption": "Games area",
+      "category": "facilities",
+      "sortOrder": 4
+    },
+    {
+      "id": "hotel-bengaluru-gallery-6",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "roomId": null,
+      "src": "/images/hotel-surroundings.webp",
+      "alt": "Tree-lined street in Jayanagar",
+      "caption": "The Jayanagar neighborhood",
+      "category": "neighborhood",
+      "sortOrder": 5
+    },
+    {
+      "id": "hotel-bengaluru-gallery-7",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "roomId": null,
+      "src": "/images/hero-1280.webp",
+      "alt": "Exterior of Jayanagar Common House",
+      "caption": "Jayanagar Common House",
+      "category": "property",
+      "sortOrder": 6
+    }
+  ],
+  "hotelHighlightSeeds": [
+    {
+      "id": "hotel-bengaluru-highlight-1",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "title": "Walkable Jayanagar",
+      "summary": "Cafes, markets, parks, and the metro are close enough for an unhurried day on foot.",
+      "icon": "map-pin",
+      "sortOrder": 0
+    },
+    {
+      "id": "hotel-bengaluru-highlight-2",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "title": "Restful rooms",
+      "summary": "Air conditioning, privacy curtains, and ensuite bathrooms make shared stays easier.",
+      "icon": "bed-double",
+      "sortOrder": 1
+    },
+    {
+      "id": "hotel-bengaluru-highlight-3",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "title": "A social lounge",
+      "summary": "Colorful shared spaces create room for games, conversation, and quiet work.",
+      "icon": "users",
+      "sortOrder": 2
+    },
+    {
+      "id": "hotel-bengaluru-highlight-4",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "title": "Hosts around the clock",
+      "summary": "The front desk and security team are available at every hour.",
+      "icon": "clock",
+      "sortOrder": 3
+    },
+    {
+      "id": "hotel-bengaluru-highlight-5",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "title": "Strong everyday value",
+      "summary": "Useful facilities and a central neighborhood without a luxury-hotel premium.",
+      "icon": "badge-indian-rupee",
+      "sortOrder": 4
+    }
+  ],
+  "hotelFactSeeds": [
+    {
+      "id": "hotel-bengaluru-fact-1",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "group": "stay",
+      "label": "Check-in",
+      "value": "1:00 PM",
+      "sortOrder": 0
+    },
+    {
+      "id": "hotel-bengaluru-fact-2",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "group": "stay",
+      "label": "Check-out",
+      "value": "10:00 AM",
+      "sortOrder": 1
+    },
+    {
+      "id": "hotel-bengaluru-fact-3",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "group": "property",
+      "label": "Rooms",
+      "value": "15",
+      "sortOrder": 2
+    },
+    {
+      "id": "hotel-bengaluru-fact-4",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "group": "property",
+      "label": "Languages",
+      "value": "English and Hindi",
+      "sortOrder": 3
+    },
+    {
+      "id": "hotel-bengaluru-fact-5",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "group": "property",
+      "label": "Guest profile",
+      "value": "Adults only",
+      "sortOrder": 4
+    },
+    {
+      "id": "hotel-bengaluru-fact-6",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "group": "property",
+      "label": "Smoking",
+      "value": "Non-smoking property",
+      "sortOrder": 5
+    }
+  ],
+  "hotelFaqSeeds": [
+    {
+      "id": "hotel-bengaluru-faq-1",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "question": "How can I keep valuables secure?",
+      "answer": "Every dorm bed includes a personal locker. Bring a padlock or ask the front desk where to purchase one nearby.",
+      "sortOrder": 0
+    },
+    {
+      "id": "hotel-bengaluru-faq-2",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "question": "Is there a women-only dorm?",
+      "answer": "Yes. The six-bed women’s ensuite dorm is listed separately from the mixed dorms.",
+      "sortOrder": 1
+    },
+    {
+      "id": "hotel-bengaluru-faq-3",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "question": "How close is the metro?",
+      "answer": "Jayanagar Metro Station is approximately 750 meters away on foot.",
+      "sortOrder": 2
+    },
+    {
+      "id": "hotel-bengaluru-faq-4",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "question": "What can I visit nearby?",
+      "answer": "Lalbagh Botanical Garden, Fourth Block Market, neighborhood cafes, and local shops are all within easy reach.",
+      "sortOrder": 3
+    },
+    {
+      "id": "hotel-bengaluru-faq-5",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "question": "Can I bring a pet?",
+      "answer": "Pets require advance confirmation from the property and an additional charge may apply.",
+      "sortOrder": 4
+    }
+  ],
+  "hotelNearbyPlaceSeeds": [
+    {
+      "id": "hotel-bengaluru-place-1",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "name": "Jayanagar Metro Station",
+      "category": "transport",
+      "distanceMeters": 750,
+      "sortOrder": 0
+    },
+    {
+      "id": "hotel-bengaluru-place-2",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "name": "Lalbagh Botanical Garden",
+      "category": "landmark",
+      "distanceMeters": 2600,
+      "sortOrder": 1
+    },
+    {
+      "id": "hotel-bengaluru-place-3",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "name": "Fourth Block Coffee House",
+      "category": "dining",
+      "distanceMeters": 180,
+      "sortOrder": 2
+    },
+    {
+      "id": "hotel-bengaluru-place-4",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "name": "Jayanagar Fourth Block Market",
+      "category": "shopping",
+      "distanceMeters": 400,
+      "sortOrder": 3
+    },
+    {
+      "id": "hotel-bengaluru-place-5",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "name": "Neighborhood Medical Centre",
+      "category": "healthcare",
+      "distanceMeters": 250,
+      "sortOrder": 4
+    }
+  ],
+  "hotelPolicySeeds": [
+    {
+      "id": "hotel-bengaluru-policy-1",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "category": "check-in",
+      "title": "Government identification",
+      "description": "Guests aged 18 or older may check in with valid government-issued identification.",
+      "sortOrder": 0
+    },
+    {
+      "id": "hotel-bengaluru-policy-2",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "category": "booking",
+      "title": "Group stays",
+      "description": "For more than five rooms, contact the property before submitting an inquiry so group terms can be confirmed.",
+      "sortOrder": 1
+    },
+    {
+      "id": "hotel-bengaluru-policy-3",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "category": "house-rule",
+      "title": "Smoke-free spaces",
+      "description": "Smoking is not permitted in rooms or indoor shared spaces.",
+      "sortOrder": 2
+    },
+    {
+      "id": "hotel-bengaluru-policy-4",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "category": "house-rule",
+      "title": "Quiet hours",
+      "description": "Quiet hours run from 11:00 PM to 7:00 AM throughout the property.",
+      "sortOrder": 3
+    },
+    {
+      "id": "hotel-bengaluru-policy-5",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "category": "pets",
+      "title": "Traveling with pets",
+      "description": "Pets require advance confirmation and additional charges may apply.",
+      "sortOrder": 4
+    }
+  ],
+  "hotelReviewScoreSeeds": [
+    {
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "category": "location",
+      "label": "Location",
+      "score": 4.8,
+      "sortOrder": 0
+    },
+    {
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "category": "service",
+      "label": "Service",
+      "score": 4.7,
+      "sortOrder": 1
+    },
+    {
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "category": "value",
+      "label": "Value for money",
+      "score": 4.7,
+      "sortOrder": 2
+    },
+    {
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "category": "cleanliness",
+      "label": "Cleanliness",
+      "score": 4.6,
+      "sortOrder": 3
+    },
+    {
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "category": "facilities",
+      "label": "Facilities",
+      "score": 4.5,
+      "sortOrder": 4
+    }
+  ],
+  "hotelReviewSeeds": [
+    {
+      "id": "hotel-bengaluru-review-1",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "roomId": "hotel-bengaluru-mixed-lower",
+      "guestName": "Asha",
+      "guestCountry": "India",
+      "travelerType": "solo",
+      "rating": 4.8,
+      "title": "Easy neighborhood, thoughtful dorm",
+      "body": "The metro walk was straightforward, the locker felt secure, and the lower bunk was comfortable after a long day in the city.",
+      "stayedAt": "2026-07",
+      "reviewedAt": "2026-07-18",
+      "nights": 2,
+      "response": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "hotel-bengaluru-review-2",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "roomId": "hotel-bengaluru-private-queen",
+      "guestName": "Mina and Joel",
+      "guestCountry": "Singapore",
+      "travelerType": "couple",
+      "rating": 4.6,
+      "title": "A calm private room near the action",
+      "body": "Our room stayed quiet at night, and the front desk gave us excellent recommendations for breakfast and the market.",
+      "stayedAt": "2026-06",
+      "reviewedAt": "2026-06-24",
+      "nights": 3,
+      "response": "Thank you for making Common House part of your Bengaluru visit. We are glad the neighborhood and room gave you the balance you wanted.",
+      "sortOrder": 1
+    },
+    {
+      "id": "hotel-bengaluru-review-3",
+      "hotelId": "hotel-bengaluru-jayanagar",
+      "roomId": null,
+      "guestName": "Rohan",
+      "guestCountry": "India",
+      "travelerType": "business",
+      "rating": 4.5,
+      "title": "Practical base for a work week",
+      "body": "Reliable common areas, useful laundry service, and quick metro access made a longer stay simple.",
+      "stayedAt": "2026-05",
+      "reviewedAt": "2026-05-12",
+      "nights": 5,
+      "response": null,
+      "sortOrder": 2
+    }
+  ],
+  "sampleRichContent": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "A slower way to arrive"
+    },
+    {
+      "type": "paragraph",
+      "text": "The best journeys begin before check-in: with a neighborhood, a table worth finding, and enough room in the day to change your mind."
+    },
+    {
+      "type": "blockquote",
+      "text": "Travel is most memorable when the place sets the pace."
+    },
+    {
+      "type": "bulletList",
+      "items": [
+        "Go early to the market",
+        "Leave one afternoon unplanned",
+        "Ask where the hotel team eats"
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Season",
+          "Best for"
+        ],
+        [
+          "Spring",
+          "Long walks and gardens"
+        ],
+        [
+          "Autumn",
+          "Food, color, and softer light"
+        ]
+      ]
+    },
+    {
+      "type": "hotelEmbed",
+      "entityId": "hotel-1-1"
+    }
+  ],
+  "postSeeds": [
+    {
+      "id": "post-1",
+      "title": "The art of the unhurried arrival",
+      "slug": "the-art-of-the-unhurried-arrival",
+      "excerpt": "A field guide to staying well: thoughtful hotels, neighborhood rituals, and days with space around them.",
+      "author": "The Elsewhere Journal",
+      "heroImage": "/images/hero-1280.webp",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A slower way to arrive"
+        },
+        {
+          "type": "paragraph",
+          "text": "The best journeys begin before check-in: with a neighborhood, a table worth finding, and enough room in the day to change your mind."
+        },
+        {
+          "type": "blockquote",
+          "text": "Travel is most memorable when the place sets the pace."
+        },
+        {
+          "type": "bulletList",
+          "items": [
+            "Go early to the market",
+            "Leave one afternoon unplanned",
+            "Ask where the hotel team eats"
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Season",
+              "Best for"
+            ],
+            [
+              "Spring",
+              "Long walks and gardens"
+            ],
+            [
+              "Autumn",
+              "Food, color, and softer light"
+            ]
+          ]
+        },
+        {
+          "type": "hotelEmbed",
+          "entityId": "hotel-1-1"
+        }
+      ],
+      "seoTitle": "Travel notes — Amalfi Coast",
+      "seoDescription": "Independent travel notes and carefully selected places to stay.",
+      "status": "published"
+    },
+    {
+      "id": "post-2",
+      "title": "Kyoto: a considered weekend",
+      "slug": "kyoto-considered-weekend-2",
+      "excerpt": "A field guide to staying well: thoughtful hotels, neighborhood rituals, and days with space around them.",
+      "author": "The Elsewhere Journal",
+      "heroImage": "/images/hero-1280.webp",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A slower way to arrive"
+        },
+        {
+          "type": "paragraph",
+          "text": "The best journeys begin before check-in: with a neighborhood, a table worth finding, and enough room in the day to change your mind."
+        },
+        {
+          "type": "blockquote",
+          "text": "Travel is most memorable when the place sets the pace."
+        },
+        {
+          "type": "bulletList",
+          "items": [
+            "Go early to the market",
+            "Leave one afternoon unplanned",
+            "Ask where the hotel team eats"
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Season",
+              "Best for"
+            ],
+            [
+              "Spring",
+              "Long walks and gardens"
+            ],
+            [
+              "Autumn",
+              "Food, color, and softer light"
+            ]
+          ]
+        },
+        {
+          "type": "hotelEmbed",
+          "entityId": "hotel-1-1"
+        }
+      ],
+      "seoTitle": "Travel notes — Kyoto",
+      "seoDescription": "Independent travel notes and carefully selected places to stay.",
+      "status": "published"
+    },
+    {
+      "id": "post-3",
+      "title": "Bali: a considered weekend",
+      "slug": "bali-considered-weekend-3",
+      "excerpt": "A field guide to staying well: thoughtful hotels, neighborhood rituals, and days with space around them.",
+      "author": "The Elsewhere Journal",
+      "heroImage": "/images/hero-1280.webp",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A slower way to arrive"
+        },
+        {
+          "type": "paragraph",
+          "text": "The best journeys begin before check-in: with a neighborhood, a table worth finding, and enough room in the day to change your mind."
+        },
+        {
+          "type": "blockquote",
+          "text": "Travel is most memorable when the place sets the pace."
+        },
+        {
+          "type": "bulletList",
+          "items": [
+            "Go early to the market",
+            "Leave one afternoon unplanned",
+            "Ask where the hotel team eats"
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Season",
+              "Best for"
+            ],
+            [
+              "Spring",
+              "Long walks and gardens"
+            ],
+            [
+              "Autumn",
+              "Food, color, and softer light"
+            ]
+          ]
+        },
+        {
+          "type": "hotelEmbed",
+          "entityId": "hotel-1-1"
+        }
+      ],
+      "seoTitle": "Travel notes — Bali",
+      "seoDescription": "Independent travel notes and carefully selected places to stay.",
+      "status": "published"
+    },
+    {
+      "id": "post-4",
+      "title": "Cape Town: a considered weekend",
+      "slug": "cape-town-considered-weekend-4",
+      "excerpt": "A field guide to staying well: thoughtful hotels, neighborhood rituals, and days with space around them.",
+      "author": "The Elsewhere Journal",
+      "heroImage": "/images/hero-1280.webp",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A slower way to arrive"
+        },
+        {
+          "type": "paragraph",
+          "text": "The best journeys begin before check-in: with a neighborhood, a table worth finding, and enough room in the day to change your mind."
+        },
+        {
+          "type": "blockquote",
+          "text": "Travel is most memorable when the place sets the pace."
+        },
+        {
+          "type": "bulletList",
+          "items": [
+            "Go early to the market",
+            "Leave one afternoon unplanned",
+            "Ask where the hotel team eats"
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Season",
+              "Best for"
+            ],
+            [
+              "Spring",
+              "Long walks and gardens"
+            ],
+            [
+              "Autumn",
+              "Food, color, and softer light"
+            ]
+          ]
+        },
+        {
+          "type": "hotelEmbed",
+          "entityId": "hotel-1-1"
+        }
+      ],
+      "seoTitle": "Travel notes — Cape Town",
+      "seoDescription": "Independent travel notes and carefully selected places to stay.",
+      "status": "published"
+    },
+    {
+      "id": "post-5",
+      "title": "Yucatán: a considered weekend",
+      "slug": "yucatan-considered-weekend-5",
+      "excerpt": "A field guide to staying well: thoughtful hotels, neighborhood rituals, and days with space around them.",
+      "author": "The Elsewhere Journal",
+      "heroImage": "/images/hero-1280.webp",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A slower way to arrive"
+        },
+        {
+          "type": "paragraph",
+          "text": "The best journeys begin before check-in: with a neighborhood, a table worth finding, and enough room in the day to change your mind."
+        },
+        {
+          "type": "blockquote",
+          "text": "Travel is most memorable when the place sets the pace."
+        },
+        {
+          "type": "bulletList",
+          "items": [
+            "Go early to the market",
+            "Leave one afternoon unplanned",
+            "Ask where the hotel team eats"
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Season",
+              "Best for"
+            ],
+            [
+              "Spring",
+              "Long walks and gardens"
+            ],
+            [
+              "Autumn",
+              "Food, color, and softer light"
+            ]
+          ]
+        },
+        {
+          "type": "hotelEmbed",
+          "entityId": "hotel-1-1"
+        }
+      ],
+      "seoTitle": "Travel notes — Yucatán",
+      "seoDescription": "Independent travel notes and carefully selected places to stay.",
+      "status": "published"
+    },
+    {
+      "id": "post-6",
+      "title": "The Cyclades: a considered weekend",
+      "slug": "cyclades-considered-weekend-6",
+      "excerpt": "A field guide to staying well: thoughtful hotels, neighborhood rituals, and days with space around them.",
+      "author": "The Elsewhere Journal",
+      "heroImage": "/images/hero-1280.webp",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A slower way to arrive"
+        },
+        {
+          "type": "paragraph",
+          "text": "The best journeys begin before check-in: with a neighborhood, a table worth finding, and enough room in the day to change your mind."
+        },
+        {
+          "type": "blockquote",
+          "text": "Travel is most memorable when the place sets the pace."
+        },
+        {
+          "type": "bulletList",
+          "items": [
+            "Go early to the market",
+            "Leave one afternoon unplanned",
+            "Ask where the hotel team eats"
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Season",
+              "Best for"
+            ],
+            [
+              "Spring",
+              "Long walks and gardens"
+            ],
+            [
+              "Autumn",
+              "Food, color, and softer light"
+            ]
+          ]
+        },
+        {
+          "type": "hotelEmbed",
+          "entityId": "hotel-1-1"
+        }
+      ],
+      "seoTitle": "Travel notes — The Cyclades",
+      "seoDescription": "Independent travel notes and carefully selected places to stay.",
+      "status": "published"
+    },
+    {
+      "id": "post-7",
+      "title": "Amalfi Coast: a considered weekend",
+      "slug": "amalfi-coast-considered-weekend-7",
+      "excerpt": "A field guide to staying well: thoughtful hotels, neighborhood rituals, and days with space around them.",
+      "author": "The Elsewhere Journal",
+      "heroImage": "/images/hero-1280.webp",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A slower way to arrive"
+        },
+        {
+          "type": "paragraph",
+          "text": "The best journeys begin before check-in: with a neighborhood, a table worth finding, and enough room in the day to change your mind."
+        },
+        {
+          "type": "blockquote",
+          "text": "Travel is most memorable when the place sets the pace."
+        },
+        {
+          "type": "bulletList",
+          "items": [
+            "Go early to the market",
+            "Leave one afternoon unplanned",
+            "Ask where the hotel team eats"
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Season",
+              "Best for"
+            ],
+            [
+              "Spring",
+              "Long walks and gardens"
+            ],
+            [
+              "Autumn",
+              "Food, color, and softer light"
+            ]
+          ]
+        },
+        {
+          "type": "hotelEmbed",
+          "entityId": "hotel-1-1"
+        }
+      ],
+      "seoTitle": "Travel notes — Amalfi Coast",
+      "seoDescription": "Independent travel notes and carefully selected places to stay.",
+      "status": "published"
+    },
+    {
+      "id": "post-8",
+      "title": "Kyoto: a considered weekend",
+      "slug": "kyoto-considered-weekend-8",
+      "excerpt": "A field guide to staying well: thoughtful hotels, neighborhood rituals, and days with space around them.",
+      "author": "The Elsewhere Journal",
+      "heroImage": "/images/hero-1280.webp",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A slower way to arrive"
+        },
+        {
+          "type": "paragraph",
+          "text": "The best journeys begin before check-in: with a neighborhood, a table worth finding, and enough room in the day to change your mind."
+        },
+        {
+          "type": "blockquote",
+          "text": "Travel is most memorable when the place sets the pace."
+        },
+        {
+          "type": "bulletList",
+          "items": [
+            "Go early to the market",
+            "Leave one afternoon unplanned",
+            "Ask where the hotel team eats"
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Season",
+              "Best for"
+            ],
+            [
+              "Spring",
+              "Long walks and gardens"
+            ],
+            [
+              "Autumn",
+              "Food, color, and softer light"
+            ]
+          ]
+        },
+        {
+          "type": "hotelEmbed",
+          "entityId": "hotel-1-1"
+        }
+      ],
+      "seoTitle": "Travel notes — Kyoto",
+      "seoDescription": "Independent travel notes and carefully selected places to stay.",
+      "status": "published"
+    },
+    {
+      "id": "post-9",
+      "title": "Bali: a considered weekend",
+      "slug": "bali-considered-weekend-9",
+      "excerpt": "A field guide to staying well: thoughtful hotels, neighborhood rituals, and days with space around them.",
+      "author": "The Elsewhere Journal",
+      "heroImage": "/images/hero-1280.webp",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A slower way to arrive"
+        },
+        {
+          "type": "paragraph",
+          "text": "The best journeys begin before check-in: with a neighborhood, a table worth finding, and enough room in the day to change your mind."
+        },
+        {
+          "type": "blockquote",
+          "text": "Travel is most memorable when the place sets the pace."
+        },
+        {
+          "type": "bulletList",
+          "items": [
+            "Go early to the market",
+            "Leave one afternoon unplanned",
+            "Ask where the hotel team eats"
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Season",
+              "Best for"
+            ],
+            [
+              "Spring",
+              "Long walks and gardens"
+            ],
+            [
+              "Autumn",
+              "Food, color, and softer light"
+            ]
+          ]
+        },
+        {
+          "type": "hotelEmbed",
+          "entityId": "hotel-1-1"
+        }
+      ],
+      "seoTitle": "Travel notes — Bali",
+      "seoDescription": "Independent travel notes and carefully selected places to stay.",
+      "status": "published"
+    },
+    {
+      "id": "post-10",
+      "title": "Cape Town: a considered weekend",
+      "slug": "cape-town-considered-weekend-10",
+      "excerpt": "A field guide to staying well: thoughtful hotels, neighborhood rituals, and days with space around them.",
+      "author": "The Elsewhere Journal",
+      "heroImage": "/images/hero-1280.webp",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A slower way to arrive"
+        },
+        {
+          "type": "paragraph",
+          "text": "The best journeys begin before check-in: with a neighborhood, a table worth finding, and enough room in the day to change your mind."
+        },
+        {
+          "type": "blockquote",
+          "text": "Travel is most memorable when the place sets the pace."
+        },
+        {
+          "type": "bulletList",
+          "items": [
+            "Go early to the market",
+            "Leave one afternoon unplanned",
+            "Ask where the hotel team eats"
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Season",
+              "Best for"
+            ],
+            [
+              "Spring",
+              "Long walks and gardens"
+            ],
+            [
+              "Autumn",
+              "Food, color, and softer light"
+            ]
+          ]
+        },
+        {
+          "type": "hotelEmbed",
+          "entityId": "hotel-1-1"
+        }
+      ],
+      "seoTitle": "Travel notes — Cape Town",
+      "seoDescription": "Independent travel notes and carefully selected places to stay.",
+      "status": "published"
+    }
+  ]
+}

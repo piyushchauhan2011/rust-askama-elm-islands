@@ -1,0 +1,56 @@
+{% include "open.html" %}
+<div class="offer-page">
+    <div class="app-container offer-page__breadcrumbs">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/destinations/{{ destination_slug }}">{{ destination_name }}</a></li>
+                <li><a href="/hotels/{{ hotel_slug }}">{{ hotel_name }}</a></li>
+                <li class="is-active" aria-current="page">{{ title }}</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="app-container offer-page__hero">
+        <div class="offer-page__image">
+            <img src="{{ image }}" alt="{{ title }} at {{ hotel_name }}" width="960" height="640" fetchpriority="high" />
+            <div class="offer-page__image-caption">An exclusive offer from {{ hotel_name }}</div>
+        </div>
+        <div class="offer-page__hero-copy">
+            <p class="eyebrow">EXCLUSIVE HOTEL OFFER</p>
+            <span class="tag is-secondary is-rounded">{{ discount_label }}</span>
+            <h1 class="display-title">{{ title }}</h1>
+            <p>{{ summary }}</p>
+            <div class="offer-page__dates"><div><strong>Offer dates</strong><span>{{ validity }}</span></div></div>
+            <a href="{{ inquiry_url }}" class="button is-primary is-large offer-page__request">Request this offer <span aria-hidden="true">→</span></a>
+            <small>No payment is taken. The hotel will confirm availability.</small>
+        </div>
+    </div>
+    <section class="content-section">
+        <div class="app-container offer-page__details">
+            <div>
+                <p class="eyebrow">OFFER DETAILS</p>
+                <h2 class="section-title">Make a little more of your stay</h2>
+                <div class="offer-page__benefits">
+                    <div class="offer-page__benefit"><span aria-hidden="true">✓</span><span>{{ benefit }}</span></div>
+                    <div class="offer-page__benefit"><span aria-hidden="true">✓</span><span>{{ summary }}</span></div>
+                    <div class="offer-page__benefit"><span aria-hidden="true">✓</span><span>Personal assistance with dates, room selection, and your request.</span></div>
+                    <div class="offer-page__benefit"><span aria-hidden="true">✓</span><span>No online payment required before the hotel confirms your stay.</span></div>
+                </div>
+                <div class="offer-page__terms">
+                    <h2>Terms and conditions</h2>
+                    <p>{{ terms }}</p>
+                    <p>{{ validity }}</p>
+                </div>
+            </div>
+            <aside class="card offer-page__aside">
+                <header class="offer-page__aside-header"><h2 class="offer-page__aside-title">Plan it personally</h2></header>
+                <div class="card-content">
+                    <p>Tell us your preferred dates and party size. The team will confirm the offer, room options, and final rate directly.</p>
+                    <a href="{{ inquiry_url }}" class="button is-primary is-fullwidth">Check availability <span aria-hidden="true">→</span></a>
+                    <a href="/hotels/{{ hotel_slug }}" class="button is-ghost is-fullwidth">Return to {{ hotel_name }}</a>
+                </div>
+            </aside>
+        </div>
+    </section>
+</div>
+{% include "close.html" %}

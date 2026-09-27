@@ -1,0 +1,35 @@
+{% include "open.html" %}
+<div class="destination-page">
+    <section class="destination-page__hero page-hero">
+        <img src="{{ hero_image }}" alt="{{ name }}" width="1280" height="720" />
+        <div class="app-container">
+            <p class="eyebrow eyebrow--light">{{ eyebrow }} · {{ country }}</p>
+            <h1 class="display-title">{{ name }}</h1>
+            <p>{{ summary }}</p>
+        </div>
+    </section>
+    <div class="app-container destination-page__search">
+        <div data-island="SearchForm" data-hydrate="load" data-props="{{ search_props }}"></div>
+    </div>
+    <section class="content-section">
+        <div class="app-container">
+            <p class="eyebrow">A CLOSER LOOK</p>
+            <h2 class="section-title">A place to stay awhile.</h2>
+            {{ rich|safe }}
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="app-container">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">STAYS IN {{ name_upper }}</p>
+                    <h2 class="section-title">Find your place here.</h2>
+                </div>
+            </div>
+            <div class="destination-page__hotel-grid home-page__hotel-grid">
+                {% for card in hotel_cards %}{{ card|safe }}{% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+{% include "close.html" %}

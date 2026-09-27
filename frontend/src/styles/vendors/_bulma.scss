@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+@use 'bulma/sass/utilities' with (
+  $primary: $app-primary,
+  $link: $app-primary,
+  $danger: $app-danger,
+  $success: $app-success,
+  $warning: $app-warning,
+  $scheme-main: $app-body-bg,
+  $text: $app-body-color,
+  $border: $app-border,
+  $family-primary: $app-font-sans,
+  $radius: $app-radius
+);
+
+@use 'bulma/sass/themes';
+@use 'bulma/sass/base/minireset';
+@use 'bulma/sass/base/generic';
+@use 'bulma/sass/elements/button';
+@use 'bulma/sass/elements/content';
+@use 'bulma/sass/elements/notification';
+@use 'bulma/sass/elements/table';
+@use 'bulma/sass/elements/tag';
+@use 'bulma/sass/form';
+@use 'bulma/sass/components/breadcrumb';
+@use 'bulma/sass/components/card';
+@use 'bulma/sass/components/modal';
+@use 'bulma/sass/components/pagination';
+@use 'bulma/sass/helpers/visibility';
+@use 'bulma/sass/helpers/other';

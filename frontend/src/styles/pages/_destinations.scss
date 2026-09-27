@@ -1,0 +1,139 @@
+@use '../abstracts' as *;
+
+.destination-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.destination-page__hotels {
+  background: color-mix(in srgb, var(--app-secondary) 55%, transparent);
+}
+
+.destination-page--index {
+  padding-block: 7rem;
+}
+
+.destination-page__header {
+  max-width: 48rem;
+  margin-bottom: 4rem;
+}
+
+.destination-page__header > p:not(.eyebrow) {
+  max-width: 36rem;
+  margin-top: 1.5rem;
+  color: var(--app-muted-color);
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+.destination-page__hero {
+  position: relative;
+  height: 42.5rem;
+  color: #fff;
+}
+
+.destination-page__hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.destination-page__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgb(29 41 38 / 90%),
+    rgb(29 41 38 / 45%),
+    rgb(29 41 38 / 10%)
+  );
+}
+
+.destination-page__hero-copy {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 6rem;
+}
+
+.destination-page__hero-copy > p {
+  max-width: 36rem;
+  color: rgb(255 255 255 / 80%);
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+.destination-page__search {
+  position: relative;
+  z-index: 1;
+  margin-top: -2rem;
+}
+
+.destination-page__content {
+  display: grid;
+  grid-template-columns: 1fr 16.25rem;
+  gap: 3.5rem;
+}
+
+.destination-page__content aside {
+  padding-left: 2rem;
+  border-left: 1px solid var(--app-border);
+}
+
+.destination-page__content dl {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.destination-page__content dl > div {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.destination-page__content dt {
+  color: var(--app-muted-color);
+  font-size: 0.75rem;
+}
+
+.destination-page__content dd {
+  margin-top: 0.25rem;
+  font-family: $app-font-serif;
+  font-size: 1.5rem;
+}
+
+@media (width < $app-lg) {
+  .destination-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .destination-page__content {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-page__content aside {
+    padding-top: 2rem;
+    padding-left: 0;
+    border-top: 1px solid var(--app-border);
+    border-left: 0;
+  }
+}
+
+@media (width <= $app-sm) {
+  .destination-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-page--index {
+    padding-block: 5rem;
+  }
+
+  .destination-page__hero {
+    height: 37.5rem;
+  }
+}

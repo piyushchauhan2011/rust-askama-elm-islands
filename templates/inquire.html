@@ -1,0 +1,22 @@
+{% include "open.html" %}
+<div class="app-container inquiry-page">
+    <div class="inquiry-page__intro">
+        <p class="eyebrow">PLAN YOUR STAY</p>
+        <h1 class="display-title">Tell us about <br /><em>your journey.</em></h1>
+        <p>This is a request, not a confirmed reservation. No payment is taken.</p>
+        <article class="card inquiry-page__hotel">
+            <img src="{{ hero_image }}" alt="{{ hotel_name }}" width="130" height="112" />
+            <div class="card-content">
+                <span>Your selected stay</span>
+                <strong>{{ hotel_name }}</strong>
+                <small>{{ address }}</small>
+                {% if room_name != "" %}<small>Room: {{ room_name }}</small>{% endif %}
+                {% if offer_title != "" %}<small>Offer: {{ offer_title }}</small>{% endif %}
+            </div>
+        </article>
+    </div>
+    <section class="inquiry-page__form" aria-label="Send an inquiry">
+        <div data-island="InquiryForm" data-hydrate="load" data-props="{{ inquiry_props }}"></div>
+    </section>
+</div>
+{% include "close.html" %}

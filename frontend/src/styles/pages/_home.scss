@@ -1,0 +1,147 @@
+@use '../abstracts' as *;
+
+.home-page__hero {
+  position: relative;
+  height: min(51.25rem, 100vh);
+  min-height: 40.625rem;
+  color: #fff;
+}
+
+.home-page__hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.home-page__hero-copy {
+  position: relative;
+  padding-top: calc(var(--header-h) + 5rem);
+}
+
+.home-page__hero-copy > p {
+  max-width: 28rem;
+  margin-top: 1.75rem;
+  font-family: $app-font-serif;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.home-page__search {
+  position: absolute;
+  z-index: 30;
+  inset: auto 0 3rem;
+}
+
+.home-page__search .date-picker__popover {
+  top: auto;
+  bottom: calc(100% + 0.5rem);
+}
+
+.home-page__destination-grid,
+.home-page__hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.home-page__hotels {
+  background: color-mix(in srgb, var(--app-secondary) 55%, transparent);
+}
+
+.home-page__offer-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 3.5rem;
+}
+
+.home-page__offer-layout > div:first-child > p {
+  max-width: 24rem;
+  margin-top: 1.5rem;
+  color: var(--app-muted-color);
+  line-height: 1.75rem;
+}
+
+.home-page__offer-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.home-page__journal {
+  background: var(--app-primary);
+  color: #fff;
+}
+
+.home-page__journal .button.is-text {
+  color: #fff;
+}
+
+.home-page__journal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.home-page__journal-grid img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.home-page__journal-grid span {
+  display: block;
+  margin-top: 1.25rem;
+  color: var(--app-secondary);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.home-page__journal-grid h3 {
+  margin-top: 0.5rem;
+  font-family: $app-font-serif;
+  font-size: 1.875rem;
+}
+
+.home-page__journal-grid p {
+  margin-top: 0.75rem;
+  color: rgb(255 255 255 / 70%);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+@media (width < $app-lg) {
+  .home-page__destination-grid,
+  .home-page__hotel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-page__offer-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width < $app-md) {
+  .home-page__journal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width <= $app-sm) {
+  .home-page__hero {
+    height: 100vh;
+    min-height: 45.625rem;
+  }
+
+  .home-page__hero-copy {
+    padding-top: calc(var(--header-h) + 2.25rem);
+  }
+
+  .home-page__search {
+    bottom: 1.75rem;
+  }
+
+  .home-page__destination-grid,
+  .home-page__hotel-grid {
+    grid-template-columns: 1fr;
+  }
+}

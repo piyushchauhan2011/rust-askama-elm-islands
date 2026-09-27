@@ -1,0 +1,108 @@
+.button.is-secondary {
+  border-color: var(--app-secondary);
+  background: var(--app-secondary);
+  color: var(--app-primary);
+}
+
+.button.is-secondary:hover,
+.button.is-secondary:focus-visible {
+  border-color: color-mix(
+    in srgb,
+    var(--app-secondary) 80%,
+    var(--app-primary)
+  );
+  background: color-mix(in srgb, var(--app-secondary) 85%, white);
+  color: var(--app-primary);
+}
+
+.tag.is-secondary {
+  background: var(--app-secondary);
+  color: var(--app-primary);
+}
+
+.button-xs {
+  height: auto;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.button-icon,
+.button-icon-sm,
+.button-icon-lg {
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+}
+
+.button-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.button-icon-sm {
+  width: 2rem;
+  height: 2rem;
+}
+
+.button-icon-lg {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.button-icon svg,
+.button-icon-sm svg,
+.button-icon-lg svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.route-error__actions .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button.gallery-lightbox__close {
+  border: 1px solid rgb(255 255 255 / 25%);
+  background: rgb(255 255 255 / 10%);
+  color: #fff;
+  box-shadow: var(--app-shadow-lg);
+  backdrop-filter: blur(4px);
+}
+
+.button.gallery-lightbox__close:hover {
+  border-color: rgb(255 255 255 / 45%);
+  background: rgb(255 255 255 / 18%);
+  color: #fff;
+}
+
+.button.gallery-lightbox__category {
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 50rem;
+  background: rgb(255 255 255 / 7%);
+  color: rgb(255 255 255 / 90%);
+  white-space: nowrap;
+}
+
+.button.gallery-lightbox__category:hover {
+  border-color: rgb(255 255 255 / 45%);
+  background: rgb(255 255 255 / 14%);
+  color: #fff;
+}
+
+.button.gallery-lightbox__category--active,
+.button.gallery-lightbox__category--active:hover {
+  border-color: rgb(255 255 255 / 90%);
+  background: var(--app-body-bg);
+  color: var(--app-body-color);
+}
+
+.button.gallery-lightbox__previous,
+.button.gallery-lightbox__next {
+  position: absolute;
+  border: 1px solid rgb(255 255 255 / 50%);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--app-body-bg) 95%, transparent);
+  color: var(--app-body-color);
+  box-shadow: var(--app-shadow-lg);
+}

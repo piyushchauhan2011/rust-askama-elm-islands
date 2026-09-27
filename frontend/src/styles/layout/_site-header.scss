@@ -1,0 +1,204 @@
+@use '../abstracts' as *;
+
+.header-scrim {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, #000 62%, transparent) 0%,
+    color-mix(in srgb, #000 46%, transparent) var(--header-h),
+    transparent calc(var(--header-h) * 1.9)
+  );
+}
+
+.site-header__sentinel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 4rem;
+  pointer-events: none;
+}
+
+.site-header {
+  position: sticky;
+  z-index: 1030;
+  top: 0;
+  height: var(--header-h);
+  border-bottom: 1px solid transparent;
+  transition:
+    color 300ms,
+    background-color 300ms,
+    border-color 300ms,
+    box-shadow 300ms;
+}
+
+.site-header--solid {
+  border-color: color-mix(in srgb, var(--app-border) 70%, transparent);
+  background: var(--app-body-bg);
+  color: var(--app-body-color);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--app-primary) 10%, transparent);
+}
+
+.site-header--overlay {
+  border-color: transparent;
+  background: transparent;
+  color: #fff;
+}
+
+.site-header__scrim {
+  position: absolute;
+  inset: 0 0 auto;
+  height: calc(var(--header-h) * 1.9);
+  pointer-events: none;
+  transition: opacity 300ms;
+}
+
+.site-header__scrim--hidden {
+  opacity: 0;
+}
+
+.site-header__skip-link {
+  position: fixed;
+  z-index: 1100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50rem;
+  background: var(--app-body-color);
+  box-shadow: var(--app-shadow-lg);
+  color: var(--app-body-bg);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transform: translateY(-6rem);
+  transition: transform 180ms;
+}
+
+.site-header__skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header__inner {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-header__brand-link {
+  border-radius: var(--app-radius);
+  outline-offset: 8px;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+.site-header__nav-link {
+  position: relative;
+  padding-block: 0.5rem;
+  border-radius: var(--app-radius);
+  color: currentColor;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  opacity: 0.75;
+  outline-offset: 8px;
+  transition: opacity 200ms;
+}
+
+.site-header__nav-link::after {
+  position: absolute;
+  inset: auto 0 0.25rem;
+  height: 2px;
+  border-radius: 50rem;
+  background: currentColor;
+  content: '';
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms;
+}
+
+.site-header__nav-link:hover,
+.site-header__nav-link[aria-current='page'] {
+  color: currentColor;
+  opacity: 1;
+}
+
+.site-header__nav-link:hover::after,
+.site-header__nav-link[aria-current='page']::after {
+  transform: scaleX(1);
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+}
+
+.site-header__search-button {
+  display: inline-flex;
+  height: 2.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 1.25rem;
+  border-radius: 50rem;
+}
+
+.site-header__search-button--overlay {
+  border: 1px solid rgb(255 255 255 / 45%);
+  background: rgb(0 0 0 / 25%);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.site-header__search-button--overlay:hover {
+  border-color: rgb(255 255 255 / 60%);
+  background: rgb(0 0 0 / 40%);
+  color: #fff;
+}
+
+.site-header [data-island='MobileNav'] {
+  display: none;
+}
+
+.site-header.site-header--overlay .site-header__mobile-toggle {
+  color: #fff;
+}
+
+.site-header.site-header--solid .site-header__mobile-toggle {
+  color: var(--app-body-color);
+}
+
+.site-header__menu-icon {
+  display: grid;
+  width: 1.05rem;
+  gap: 0.22rem;
+}
+
+.site-header__menu-icon span {
+  display: block;
+  height: 1.5px;
+  background: currentColor;
+}
+
+.site-header__mobile-toggle,
+.site-header__admin-mobile-nav {
+  display: none;
+}
+
+@media (width < $app-lg) {
+  .site-header__nav,
+  .site-header__actions {
+    display: none;
+  }
+  .site-header [data-island='MobileNav'] {
+    display: block;
+  }
+
+  .site-header__mobile-toggle,
+  .site-header__admin-mobile-nav {
+    display: inline-flex;
+  }
+}

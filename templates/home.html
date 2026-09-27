@@ -1,0 +1,84 @@
+{% include "open.html" %}
+<div class="home-page">
+    <section class="home-page__hero">
+        <picture class="hero-image">
+            <source media="(max-width:700px)" type="image/avif" srcset="/images/gen/hero-768-420.58f23b53.avif 420w, /images/gen/hero-768-768.58f23b53.avif 768w" sizes="100vw" />
+            <source media="(max-width:700px)" type="image/webp" srcset="/images/gen/hero-768-420.58f23b53.webp 420w, /images/gen/hero-768-768.58f23b53.webp 768w" sizes="100vw" />
+            <source type="image/avif" srcset="/images/gen/hero-1280-768.fa1c8e2f.avif 768w, /images/gen/hero-1280-1280.fa1c8e2f.avif 1280w" sizes="100vw" />
+            <img class="hero-image__image" src="/images/gen/hero-1280-1280.fa1c8e2f.webp" srcset="/images/gen/hero-1280-768.fa1c8e2f.webp 768w, /images/gen/hero-1280-1280.fa1c8e2f.webp 1280w" sizes="100vw" alt="A stone hotel and infinity pool overlooking a calm Mediterranean bay" width="1280" height="720" fetchpriority="high" />
+        </picture>
+        <div class="home-page__hero-overlay hero-overlay"></div>
+        <div class="app-container home-page__hero-copy home-reveal">
+            <p class="eyebrow eyebrow--light">STAYS WITH A SENSE OF PLACE</p>
+            <h1 class="display-title">Go somewhere<br /><em>worth remembering.</em></h1>
+            <p>Independent hotels and slower journeys, selected with care.</p>
+        </div>
+        <div class="app-container home-page__search home-reveal home-reveal-delay-2">
+            <div data-island="SearchForm" data-hydrate="load" data-props="{{ search_props }}"></div>
+        </div>
+    </section>
+    <section class="content-section home-page__destinations home-reveal">
+        <div class="app-container">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">CURATED PLACES</p>
+                    <h2 class="section-title">Where will you go next?</h2>
+                </div>
+                <a href="/destinations" class="button is-text">All destinations →</a>
+            </div>
+            <div class="home-page__destination-grid">
+                {% for card in destination_cards %}{{ card|safe }}{% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="content-section home-page__hotels home-reveal">
+        <div class="app-container">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">REMARKABLE STAYS</p>
+                    <h2 class="section-title">Hotels we keep thinking about</h2>
+                </div>
+                <a href="/search" class="button is-text">Explore all hotels →</a>
+            </div>
+            <div class="home-page__hotel-grid">
+                {% for card in hotel_cards %}{{ card|safe }}{% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="content-section home-page__offers">
+        <div class="app-container home-page__offer-layout">
+            <div>
+                <p class="eyebrow">SPECIAL OFFERS</p>
+                <h2 class="section-title">More time.<br /><em>More to remember.</em></h2>
+                <p>Seasonal invitations designed to make a good stay linger a little longer.</p>
+            </div>
+            <div class="home-page__offer-list">
+                {% for card in offer_cards %}{{ card|safe }}{% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="content-section home-page__journal">
+        <div class="app-container">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow eyebrow--light">THE JOURNAL</p>
+                    <h2 class="section-title">Stories for going well</h2>
+                </div>
+                <a href="/blog" class="button is-text">Read the journal →</a>
+            </div>
+            <div class="home-page__journal-grid">
+                {% for post in posts %}
+                <article>
+                    <a href="/blog/{{ post.slug }}">
+                        <img src="{{ post.hero_image }}" alt="Travel journal destination" width="376" height="250" loading="lazy" />
+                        <span>FIELD NOTES</span>
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.excerpt }}</p>
+                    </a>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+{% include "close.html" %}

@@ -1,0 +1,55 @@
+{% include "open.html" %}
+<div class="search-page">
+    <div class="app-container">
+        <header class="search-page__header">
+            <p class="eyebrow">FIND YOUR STAY</p>
+            <h1 class="display-title">Hotels with a<br /><em>sense of place.</em></h1>
+        </header>
+        <div data-island="SearchForm" data-hydrate="load" data-props="{{ search_props }}"></div>
+        <div class="search-page__layout">
+            <div data-island="SearchExperience" data-hydrate="load" data-props="{{ filter_props }}"></div>
+            <section aria-label="Hotel search results">
+                <div class="search-page__results-header">
+                    <p><strong>{{ total }}</strong> stays found</p>
+                    <form class="search-page__sort" action="/search" method="get">
+                        {% for field in hidden %}
+                        <input type="hidden" name="{{ field.name }}" value="{{ field.value }}" />
+                        {% endfor %}
+                        <label class="label" for="sort-hotels">Sort by</label>
+                        <div class="select">
+                            <select id="sort-hotels" name="sort">
+                                <option value="relevance" {% if sort == "relevance" %}selected{% endif %}>Recommended</option>
+                                <option value="price-asc" {% if sort == "price-asc" %}selected{% endif %}>Price: low to high</option>
+                                <option value="price-desc" {% if sort == "price-desc" %}selected{% endif %}>Price: high to low</option>
+                                <option value="rating" {% if sort == "rating" %}selected{% endif %}>Guest rating</option>
+                            </select>
+                        </div>
+                        <button class="button is-text" type="submit">Sort</button>
+                    </form>
+                </div>
+                {% if cards.is_empty() %}
+                <div class="notification is-secondary">
+                    <h2>No exact matches</h2>
+                    <p>Try widening the price range or removing an amenity. <a href="/search" class="search-page__clear-link">Clear all filters</a></p>
+                </div>
+                {% else %}
+                <div class="search-page__results">
+                    {% for card in cards %}{{ card|safe }}{% endfor %}
+                </div>
+                {% endif %}
+                {% if pages > 1 %}
+                <nav class="pagination search-page__pagination" aria-label="Search result pages">
+                    <ul class="pagination-list">
+                        {% for link in page_links %}
+                        <li>
+                            <a class="pagination-link {% if link.current %}is-current{% endif %}" {% if link.current %}aria-current="page"{% endif %} href="{{ link.href }}">{{ link.number }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+                {% endif %}
+            </section>
+        </div>
+    </div>
+</div>
+{% include "close.html" %}

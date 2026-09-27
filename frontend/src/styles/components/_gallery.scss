@@ -1,0 +1,243 @@
+@use '../abstracts' as *;
+
+.gallery-grid {
+  position: relative;
+  display: grid;
+  height: 32.5rem;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.25rem;
+  overflow: hidden;
+}
+
+.gallery-grid__item {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  background: var(--app-muted);
+}
+
+.gallery-grid__item--primary {
+  grid-row: span 2;
+}
+
+.gallery-grid__image-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-grid__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms;
+}
+
+.gallery-grid__item:hover .gallery-grid__image {
+  transform: scale(1.03);
+}
+
+.gallery-grid__category {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: rgb(29 41 38 / 65%);
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.gallery-grid__all {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--app-shadow-lg);
+}
+
+.gallery-lightbox .modal-content {
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.gallery-lightbox__content {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  background: var(--app-primary);
+  color: #fff;
+}
+
+.gallery-lightbox__header {
+  display: flex;
+  min-height: 4rem;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.75rem;
+  padding-inline: 1.5rem;
+  border-bottom: 1px solid rgb(255 255 255 / 15%);
+}
+
+.gallery-lightbox__heading {
+  min-width: 0;
+  flex-grow: 1;
+}
+
+.gallery-lightbox__heading strong {
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  font-family: $app-font-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gallery-lightbox__heading small {
+  color: rgb(255 255 255 / 60%);
+}
+
+.gallery-lightbox__categories {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+
+.gallery-lightbox__stage {
+  position: relative;
+  display: flex;
+  min-height: 0;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  touch-action: pan-y;
+}
+
+.gallery-lightbox__active-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.gallery-lightbox__glyph {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.gallery-lightbox__previous {
+  left: 1.5rem;
+}
+
+.gallery-lightbox__next {
+  right: 1.5rem;
+}
+
+.gallery-lightbox__footer {
+  flex-shrink: 0;
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid rgb(255 255 255 / 10%);
+  background: rgb(29 41 38 / 20%);
+}
+
+.gallery-lightbox__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.gallery-lightbox__caption span:last-child {
+  flex-shrink: 0;
+  color: rgb(255 255 255 / 55%);
+}
+
+.gallery-lightbox__thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.gallery-lightbox__thumbnail {
+  width: 6rem;
+  height: 4rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--app-radius);
+  opacity: 0.6;
+  transition: opacity 180ms;
+}
+
+.gallery-lightbox__thumbnail:hover,
+.gallery-lightbox__thumbnail--active {
+  opacity: 1;
+}
+
+.gallery-lightbox__thumbnail--active {
+  border-color: #fff;
+}
+
+.gallery-lightbox__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (width < $app-lg) {
+  .gallery-grid__item--fifth {
+    display: none;
+  }
+}
+
+@media (width <= $app-sm) {
+  .gallery-grid {
+    height: auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 10rem);
+  }
+
+  .gallery-grid__item--fourth {
+    display: none;
+  }
+
+  .gallery-lightbox__header,
+  .gallery-lightbox__categories,
+  .gallery-lightbox__footer {
+    padding-inline: 1rem;
+  }
+
+  .gallery-lightbox__previous {
+    left: 0.75rem;
+  }
+
+  .gallery-lightbox__next {
+    right: 0.75rem;
+  }
+
+  .gallery-lightbox__thumbnail {
+    width: 5rem;
+    height: 3.5rem;
+  }
+}

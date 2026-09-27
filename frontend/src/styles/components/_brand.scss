@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  color: var(--app-primary);
+  line-height: 1;
+  transition: color 300ms;
+}
+
+.brand--light {
+  color: #fff;
+}
+
+.brand__name {
+  font-family: $app-font-serif;
+  font-size: 1.875rem;
+  font-style: italic;
+}
+
+.brand__tagline {
+  margin-top: 0.25rem;
+  font-size: 0.5rem;
+  letter-spacing: 0.25em;
+}

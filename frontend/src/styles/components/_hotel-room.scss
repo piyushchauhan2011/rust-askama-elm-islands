@@ -1,0 +1,160 @@
+@use '../abstracts' as *;
+
+.hotel-room {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  overflow: hidden;
+  border-color: color-mix(in srgb, var(--app-border) 80%, transparent);
+  border-radius: 0.75rem;
+  background: var(--app-card);
+  box-shadow: var(--app-shadow-sm);
+}
+
+.hotel-room__image-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.hotel-room__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 27.5rem;
+}
+
+.hotel-room__content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.hotel-room__header {
+  display: grid;
+  gap: 1rem;
+  padding: 2.5rem 2.5rem 1.75rem;
+  border: 0;
+  background: transparent;
+}
+
+.hotel-room__title {
+  font-family: $app-font-serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.hotel-room__header p {
+  max-width: 42rem;
+  color: var(--app-muted-color);
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+.hotel-room__body {
+  display: grid;
+  gap: 1.75rem;
+  padding: 0 2.5rem 2.5rem;
+  color: var(--app-muted-color);
+}
+
+.hotel-room__facts,
+.hotel-room__amenities > div {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.75rem;
+  row-gap: 0.75rem;
+}
+
+.hotel-room__facts span,
+.hotel-room__amenities span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hotel-room__facts svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.hotel-room__amenities {
+  display: grid;
+  gap: 1rem;
+}
+
+.hotel-room__amenities > strong {
+  color: var(--app-body-color);
+  font-size: 0.75rem;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.hotel-room__amenities svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: color-mix(in srgb, var(--app-primary) 45%, transparent);
+}
+
+.hotel-room__gallery {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding-block: 1.25rem;
+  border-color: color-mix(in srgb, var(--app-primary) 20%, transparent);
+  background: var(--app-body-bg);
+}
+
+.hotel-room__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid var(--app-border);
+  background: color-mix(in srgb, var(--app-body-bg) 45%, transparent);
+  color: var(--app-muted-color);
+}
+
+.hotel-room__footer strong {
+  color: var(--app-body-color);
+  font-family: $app-font-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.hotel-room__inquire {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 1.25rem;
+  border-radius: 50rem;
+}
+
+@media (width < $app-md) {
+  .hotel-room {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-room__image-wrap {
+    height: 20rem;
+  }
+
+  .hotel-room__image {
+    min-height: 0;
+  }
+}
+
+@media (width <= $app-sm) {
+  .hotel-room__header {
+    padding: 2rem 2rem 1.5rem;
+  }
+
+  .hotel-room__body {
+    padding: 0 2rem 2rem;
+  }
+
+  .hotel-room__footer {
+    padding-inline: 2rem;
+  }
+}

@@ -1,0 +1,239 @@
+@use '../abstracts' as *;
+
+.hotel-card {
+  height: 100%;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: var(--app-card);
+  box-shadow: none;
+}
+
+.hotel-card__image-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.hotel-card__image-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.hotel-card__image {
+  transition: transform 500ms;
+}
+
+.hotel-card:hover .hotel-card__image {
+  transform: scale(1.03);
+}
+
+.hotel-card__rating {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  box-shadow: var(--app-shadow-sm);
+}
+
+.hotel-card__rating svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  fill: currentColor;
+}
+
+.hotel-card__body {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.hotel-card__location {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--app-muted-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.hotel-card__location svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.hotel-card__title {
+  font-family: $app-font-serif;
+  font-size: 1.875rem;
+  line-height: 1.25;
+}
+
+.hotel-card__summary {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--app-muted-color);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.hotel-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--app-border);
+  background: transparent;
+  font-size: 0.875rem;
+}
+
+.hotel-card__price {
+  color: var(--app-muted-color);
+}
+
+.hotel-card__price strong {
+  color: var(--app-body-color);
+  font-family: $app-font-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.destination-card {
+  min-height: 29.375rem;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+}
+
+.destination-card__link {
+  position: relative;
+  display: block;
+  min-height: 29.375rem;
+}
+
+.destination-card__image-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.destination-card__image {
+  transition: transform 700ms;
+}
+
+.destination-card:hover .destination-card__image {
+  transform: scale(1.05);
+}
+
+.destination-card__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 1.75rem;
+  background: linear-gradient(
+    to top,
+    rgb(29 41 38 / 90%),
+    rgb(29 41 38 / 30%),
+    transparent
+  );
+  color: #fff;
+}
+
+.destination-card__country {
+  color: var(--app-secondary);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.destination-card__content h3 {
+  margin-top: 0.5rem;
+  font-family: $app-font-serif;
+  font-size: 2.25rem;
+}
+
+.destination-card__content p {
+  display: -webkit-box;
+  overflow: hidden;
+  margin-top: 0.75rem;
+  color: rgb(255 255 255 / 80%);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.destination-card__content b {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.destination-card__content b svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.offer-card {
+  display: grid;
+  grid-template-columns: 11.25rem 1fr;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.offer-card__image-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.offer-card__body {
+  padding: 1.5rem;
+}
+
+.offer-card__body h3 {
+  margin-top: 1rem;
+  font-family: $app-font-serif;
+  font-size: 1.5rem;
+}
+
+.offer-card__body p {
+  margin-top: 0.5rem;
+  color: var(--app-muted-color);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.offer-card__link {
+  height: auto;
+  margin-top: 0.75rem;
+  padding-inline: 0;
+}
+
+@media (min-width: $app-lg) {
+  .destination-card:nth-child(3n + 2) {
+    transform: translateY(2.5rem);
+  }
+}
+
+@media (width <= $app-sm) {
+  .offer-card {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-card__image-wrap {
+    height: 13rem;
+  }
+}

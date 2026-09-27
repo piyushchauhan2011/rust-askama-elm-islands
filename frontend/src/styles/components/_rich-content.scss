@@ -1,0 +1,70 @@
+@use '../abstracts' as *;
+
+.rich-content {
+  display: grid;
+  max-width: 48rem;
+  gap: 1.5rem;
+  color: var(--app-body-color);
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+.rich-content h2,
+.rich-content h3,
+.rich-content h4 {
+  margin-top: 1.5rem;
+  font-family: $app-font-serif;
+  line-height: 1.25;
+}
+
+.rich-content h2 {
+  font-size: 2.25rem;
+}
+
+.rich-content h3 {
+  font-size: 1.875rem;
+}
+
+.rich-content h4 {
+  font-size: 1.5rem;
+}
+
+.rich-content blockquote {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  border-left: 4px solid var(--app-accent);
+  font-family: $app-font-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.rich-content ul,
+.rich-content ol {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.rich-content ul {
+  list-style: disc;
+}
+
+.rich-content ol {
+  list-style: decimal;
+}
+
+.rich-content img {
+  width: 100%;
+}
+
+.rich-content__hotel {
+  display: grid;
+  gap: 1rem;
+  margin-block: 2.5rem;
+  padding: 1.5rem;
+  border-left: 4px solid var(--app-accent);
+  background: color-mix(in srgb, var(--app-secondary) 60%, transparent);
+}
+
+.rich-content__hotel .tag {
+  justify-self: start;
+}

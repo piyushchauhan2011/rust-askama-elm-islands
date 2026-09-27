@@ -1,0 +1,17 @@
+{% include "open.html" %}
+<article class="blog-page blog-page--detail">
+    <header class="app-container blog-page__post-header">
+        <p class="eyebrow">THE JOURNAL</p>
+        <h1 class="display-title">{{ title }}</h1>
+        <p>{{ excerpt }}</p>
+        <span>By {{ author }}</span>
+    </header>
+    <figure class="blog-page__hero">
+        <img src="{{ hero_image }}" alt="Travel story setting" width="1600" height="900" fetchpriority="high" />
+    </figure>
+    <div class="app-container blog-page__content">{{ rich|safe }}</div>
+    <footer class="app-container blog-page__post-footer">
+        <a href="/blog" class="button is-text">← More stories</a>
+    </footer>
+</article>
+{% include "close.html" %}

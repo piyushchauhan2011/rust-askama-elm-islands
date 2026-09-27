@@ -1,0 +1,35 @@
+dialog.modal {
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+dialog.modal[open] {
+  display: block;
+}
+
+dialog.modal::backdrop {
+  background: rgb(0 0 0 / 55%);
+  transition: opacity 200ms ease;
+}
+
+dialog.modal[data-closing]::backdrop {
+  opacity: 0;
+}
+
+dialog.modal .modal-content {
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
+}
+
+dialog.modal[data-closing] .modal-content {
+  opacity: 0;
+  transform: translateY(0.5rem);
+}

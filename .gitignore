@@ -1,0 +1,7 @@
+/target
+/frontend/node_modules
+/frontend/elm-stuff
+/static/assets
+/.env
+/data
+/snapshot-worker/node_modules

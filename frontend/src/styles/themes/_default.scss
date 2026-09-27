@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+:root {
+  --app-primary: #{$app-primary};
+  --app-secondary: #{$app-secondary};
+  --app-danger: #{$app-danger};
+  --app-success: #{$app-success};
+  --app-warning: #{$app-warning};
+  --app-body-bg: #{$app-body-bg};
+  --app-body-color: #{$app-body-color};
+  --app-border: #{$app-border};
+  --app-input-border: #{$app-input-border};
+  --app-radius: #{$app-radius};
+  --app-font-sans: #{$app-font-sans};
+  --app-shadow-sm: 0 0.125rem 0.25rem rgb(0 0 0 / 7.5%);
+  --app-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  --app-shadow-lg: 0 1rem 3rem rgb(0 0 0 / 17.5%);
+  --app-card: #fff;
+  --app-muted: #eee9df;
+  --app-muted-color: #66716c;
+  --app-accent: #efe2d1;
+  --app-ring: #e4a86f;
+  --header-h: 76px;
+}
+
+@media (width <= $app-sm) {
+  :root {
+    --header-h: 68px;
+  }
+}

@@ -1,0 +1,41 @@
+.hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--app-primary) 82%, transparent),
+      color-mix(in srgb, var(--app-primary) 18%, transparent) 72%
+    ),
+    linear-gradient(
+      0deg,
+      color-mix(in srgb, var(--app-primary) 48%, transparent),
+      transparent 52%
+    );
+}
+
+.blur-image {
+  display: block;
+  overflow: hidden;
+  background-color: var(--app-muted);
+}
+
+.blur-image__picture {
+  display: contents;
+}
+
+.blur-image__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image {
+  display: contents;
+}
+
+.hero-image__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

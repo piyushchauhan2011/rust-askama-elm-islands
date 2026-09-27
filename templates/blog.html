@@ -1,0 +1,24 @@
+{% include "open.html" %}
+<div class="app-container blog-page blog-page--index">
+    <header class="blog-page__header">
+        <p class="eyebrow">THE JOURNAL</p>
+        <h1 class="display-title">Stories for <br /><em>going well.</em></h1>
+        <p>Field notes, neighborhood rituals, and the stays that give a journey its shape.</p>
+    </header>
+    <div class="blog-page__grid">
+        {% for post in posts %}
+        <article class="blog-page__card {% if loop.first %}blog-page__card--featured{% endif %}">
+            <a href="/blog/{{ post.slug }}">
+                <img src="{{ post.hero_image }}" alt="Travel journal destination" width="960" height="600" loading="{% if loop.first %}eager{% else %}lazy{% endif %}" />
+                <div class="blog-page__card-content">
+                    <span class="tag is-secondary">FIELD NOTES</span>
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.excerpt }}</p>
+                    <b>Read story <span aria-hidden="true">→</span></b>
+                </div>
+            </a>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+{% include "close.html" %}

@@ -1,0 +1,12 @@
+{% include "open.html" %}
+<div class="app-container destination-page destination-page--index">
+    <header class="destination-page__header">
+        <p class="eyebrow">FIELD GUIDES</p>
+        <h1 class="display-title">Places worth<br /><em>knowing slowly.</em></h1>
+        <p>Independent stays, local rituals, and considered notes for a more rewarding arrival.</p>
+    </header>
+    <div class="destination-page__grid">
+        {% for card in cards %}{{ card|safe }}{% endfor %}
+    </div>
+</div>
+{% include "close.html" %}
