@@ -15,8 +15,8 @@ use crate::models::*;
 use crate::util::{price, rating};
 use crate::AppState;
 
-const ISLANDS_CSS: &str = include_str!("../templates/islands-inline.css");
-const ADMIN_CSS: &str = include_str!("../templates/admin-inline.css");
+const ISLANDS_CSS: &str = include_str!("../static/assets/islands-inline.css");
+const ADMIN_CSS: &str = include_str!("../static/assets/admin-inline.css");
 
 struct Meta {
     seo_title: String,

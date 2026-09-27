@@ -2,8 +2,6 @@
 /frontend/node_modules
 /frontend/elm-stuff
 /static/assets
-/templates/islands-inline.css
-/templates/admin-inline.css
 /.env
 /data
 /snapshot-worker/node_modules
