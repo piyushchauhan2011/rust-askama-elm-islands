@@ -10,11 +10,7 @@
     {% endif %}
     <meta name="robots" content="{{ meta.robots }}" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    {% if meta.admin %}
-    <style>{% include "admin-inline.html" %}</style>
-    {% else %}
-    <style>{% include "islands-inline.html" %}</style>
-    {% endif %}
+    <style>{{ meta.css|safe }}</style>
     {% if meta.json_ld != "" %}
     <script type="application/ld+json">{{ meta.json_ld|safe }}</script>
     {% endif %}

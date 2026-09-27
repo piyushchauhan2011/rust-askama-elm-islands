@@ -48,7 +48,7 @@ function inlineBuiltCss() {
     closeBundle() {
       const manifest = JSON.parse(readFileSync(join(root, '../static/assets/.vite/manifest.json'), 'utf8'))
       const templates = join(root, '../templates')
-      for (const [entry, output] of [['src/islands.js', 'islands-inline.html'], ['src/admin.js', 'admin-inline.html']]) {
+      for (const [entry, output] of [['src/islands.js', 'islands-inline.css'], ['src/admin.js', 'admin-inline.css']]) {
         const files = manifest[entry]?.css ?? []
         if (!files.length) throw new Error(`No CSS emitted for ${entry}`)
         let css = files.map(file => readFileSync(join(root, '../static/assets', file), 'utf8')).join('\n')

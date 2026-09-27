@@ -15,6 +15,9 @@ use crate::models::*;
 use crate::util::{price, rating};
 use crate::AppState;
 
+const ISLANDS_CSS: &str = include_str!("../templates/islands-inline.css");
+const ADMIN_CSS: &str = include_str!("../templates/admin-inline.css");
+
 struct Meta {
     seo_title: String,
     seo_description: String,
@@ -24,6 +27,7 @@ struct Meta {
     header_overlay: bool,
     admin: bool,
     year: i32,
+    css: &'static str,
     script: String,
 }
 
@@ -268,6 +272,7 @@ fn meta(state: &AppState, title: &str, description: &str, path: &str, robots: &s
         header_overlay: overlay,
         admin,
         year: Utc::now().year(),
+        css: if admin { ADMIN_CSS } else { ISLANDS_CSS },
         script: if admin { state.assets.admin_script.clone() } else { state.assets.runtime_script.clone() },
     }
 }
