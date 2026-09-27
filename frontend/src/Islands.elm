@@ -832,11 +832,7 @@ mobileNav nav =
             [ span [ class "site-header__menu-icon", attribute "aria-hidden" "true" ]
                 [ span [] [], span [] [], span [] [] ]
             ]
-        , if nav.open then
-            mobileMenu nav
-
-          else
-            text ""
+        , mobileMenu nav
         ]
 
 
@@ -844,6 +840,7 @@ mobileMenu : MobileNav -> Html Msg
 mobileMenu menu =
     Html.node "dialog"
         [ class "modal mobile-navigation"
+        , attribute "data-open" (if menu.open then "true" else "false")
         , attribute "aria-labelledby" "mobile-navigation-title"
         , attribute "aria-describedby" "mobile-navigation-description"
         , preventDefaultOn "cancel" (Decode.succeed ( ToggleMenu, True ))
