@@ -73,6 +73,8 @@ pub async fn dashboard(State(state): State<AppState>, headers: HeaderMap) -> Res
     }
     let destination_count: i64 = sqlx::query_scalar("SELECT COUNT(*) FROM destinations").fetch_one(&state.pool).await.unwrap_or(0);
     let hotel_count: i64 = sqlx::query_scalar("SELECT COUNT(*) FROM hotels").fetch_one(&state.pool).await.unwrap_or(0);
+    let room_count: i64 = sqlx::query_scalar("SELECT COUNT(*) FROM rooms").fetch_one(&state.pool).await.unwrap_or(0);
+    let offer_count: i64 = sqlx::query_scalar("SELECT COUNT(*) FROM offers").fetch_one(&state.pool).await.unwrap_or(0);
     let inquiry_count: i64 = sqlx::query_scalar("SELECT COUNT(*) FROM inquiries").fetch_one(&state.pool).await.unwrap_or(0);
     let post_count: i64 = sqlx::query_scalar("SELECT COUNT(*) FROM blog_posts").fetch_one(&state.pool).await.unwrap_or(0);
     let recent = sqlx::query(
@@ -100,10 +102,12 @@ pub async fn dashboard(State(state): State<AppState>, headers: HeaderMap) -> Res
         .collect();
     let destinations = camel_rows(&state, "SELECT id, name, slug FROM destinations ORDER BY name").await;
     let hotels = camel_rows(&state, "SELECT id, name, slug, destination_id FROM hotels ORDER BY name").await;
-    let media = camel_rows(&state, "SELECT id, filename, alt, caption, variants, created_at FROM media_assets ORDER BY created_at DESC").await;
+    let media = media_rows(&state).await;
     Json(json!({
         "destinationCount": destination_count,
         "hotelCount": hotel_count,
+        "roomCount": room_count,
+        "offerCount": offer_count,
         "inquiryCount": inquiry_count,
         "postCount": post_count,
         "recentInquiries": recent_inquiries,
@@ -121,14 +125,12 @@ pub async fn list(State(state): State<AppState>, headers: HeaderMap, Path(kind):
     if !KINDS.contains(&kind.as_str()) {
         return StatusCode::NOT_FOUND.into_response();
     }
-    let table = table_for(&kind);
-    let order = if kind == "posts" { "title" } else { "name" };
-    let label = if kind == "offers" || kind == "posts" { "title" } else { "name" };
-    let sql = format!("SELECT id, {label} AS label, slug, status FROM {table} ORDER BY {order}");
-    if kind == "offers" || kind == "posts" {
-        let sql = format!("SELECT id, title AS label, slug, status FROM {table} ORDER BY title");
-        return Json(camel_rows_sql(&state, &sql).await).into_response();
-    }
+    let sql = match kind.as_str() {
+        "rooms" => "SELECT r.id, r.name AS label, r.slug, r.status, h.name AS hotel_name FROM rooms r JOIN hotels h ON h.id = r.hotel_id ORDER BY h.name, r.name".to_string(),
+        "offers" => "SELECT o.id, o.title AS label, o.slug, o.status, h.name AS hotel_name FROM offers o JOIN hotels h ON h.id = o.hotel_id ORDER BY h.name, o.title".to_string(),
+        "posts" => "SELECT id, title AS label, slug, status FROM blog_posts ORDER BY title".to_string(),
+        other => format!("SELECT id, name AS label, slug, status FROM {} ORDER BY name", table_for(other)),
+    };
     Json(camel_rows_sql(&state, &sql).await).into_response()
 }
 
@@ -140,8 +142,9 @@ pub async fn item(State(state): State<AppState>, headers: HeaderMap, Path((kind,
         return StatusCode::NOT_FOUND.into_response();
     }
     let pickers = picker_payload(&state).await;
+    let media = media_rows(&state).await;
     if id == "new" {
-        return Json(json!({"item": default_item(&kind), "destinations": pickers.0, "hotels": pickers.1})).into_response();
+        return Json(json!({"item": default_item(&kind), "destinations": pickers.0, "hotels": pickers.1, "media": media})).into_response();
     }
     let row = sqlx::query(&format!("SELECT to_jsonb(t) AS data FROM {} t WHERE id = $1", table_for(&kind)))
         .bind(&id)
@@ -150,7 +153,7 @@ pub async fn item(State(state): State<AppState>, headers: HeaderMap, Path((kind,
     match row {
         Ok(Some(row)) => {
             let data: Value = row.get("data");
-            Json(json!({"item": camelize(data), "destinations": pickers.0, "hotels": pickers.1})).into_response()
+            Json(json!({"item": camelize(data), "destinations": pickers.0, "hotels": pickers.1, "media": media})).into_response()
         }
         Ok(None) => StatusCode::NOT_FOUND.into_response(),
         Err(error) => (StatusCode::INTERNAL_SERVER_ERROR, error.to_string()).into_response(),
@@ -261,17 +264,20 @@ pub async fn upload_media(State(state): State<AppState>, headers: HeaderMap, mut
     let mut bytes = None;
     let mut filename = String::from("upload");
     let mut alt = String::new();
+    let mut caption = String::new();
     while let Ok(Some(field)) = multipart.next_field().await {
         let name = field.name().unwrap_or("").to_string();
         if name == "file" {
             filename = field.file_name().unwrap_or("upload").to_string();
             match field.bytes().await {
-                Ok(data) if data.len() <= 8 * 1024 * 1024 => bytes = Some(data),
-                Ok(_) => return (StatusCode::BAD_REQUEST, Json(json!({"error": "Image must be 8MB or smaller."}))).into_response(),
+                Ok(data) if data.len() <= 10 * 1024 * 1024 => bytes = Some(data),
+                Ok(_) => return (StatusCode::BAD_REQUEST, Json(json!({"error": "Images must be no larger than 10 MB."}))).into_response(),
                 Err(_) => return (StatusCode::BAD_REQUEST, Json(json!({"error": "Could not read the upload."}))).into_response(),
             }
         } else if name == "alt" {
             alt = field.text().await.unwrap_or_default();
+        } else if name == "caption" {
+            caption = field.text().await.unwrap_or_default();
         }
     }
     let Some(bytes) = bytes else {
@@ -303,17 +309,25 @@ pub async fn upload_media(State(state): State<AppState>, headers: HeaderMap, mut
         }
         variants.insert(name.into(), Value::String(format!("/media/{id}/{name}")));
     }
-    let alt = if alt.trim().is_empty() { filename.clone() } else { alt };
+    let alt = alt.trim().to_string();
+    if alt.len() < 2 {
+        return (StatusCode::BAD_REQUEST, Json(json!({"error": "Alternative text is required."}))).into_response();
+    }
+    let caption = {
+        let trimmed = caption.trim().to_string();
+        if trimmed.is_empty() { None } else { Some(trimmed) }
+    };
     let variants = Value::Object(variants);
     let result = sqlx::query(
-        "INSERT INTO media_assets (id, filename, mime_type, width, height, alt, focal_x, focal_y, variants)
-         VALUES ($1,$2,'image/webp',$3,$4,$5,0.5,0.5,$6)",
+        "INSERT INTO media_assets (id, filename, mime_type, width, height, alt, caption, focal_x, focal_y, variants)
+         VALUES ($1,$2,'image/webp',$3,$4,$5,$6,0.5,0.5,$7)",
     )
     .bind(&id)
     .bind(&filename)
     .bind(image.width() as i32)
     .bind(image.height() as i32)
     .bind(&alt)
+    .bind(&caption)
     .bind(&variants)
     .execute(&state.pool)
     .await;
@@ -372,6 +386,16 @@ async fn save_record(state: &AppState, kind: &str, input: &Value) -> Result<Stri
         insert_row(&mut tx, kind, &values).await?;
         id
     };
+    if let Some(Value::String(status)) = values.get("status").cloned() {
+        if matches!(kind, "destinations" | "hotels" | "posts") {
+            let sql = if status == "published" {
+                format!("UPDATE {} SET published_at = COALESCE(published_at, now()) WHERE id = $1", table_for(kind))
+            } else {
+                format!("UPDATE {} SET published_at = NULL WHERE id = $1", table_for(kind))
+            };
+            sqlx::query(&sql).bind(&id).execute(&mut *tx).await?;
+        }
+    }
     snapshots::invalidate(&mut tx, kind, &id, old_path.as_deref(), old_destination.as_deref(), old_hotel.as_deref()).await?;
     tx.commit().await?;
     Ok(id)
@@ -646,6 +670,10 @@ fn default_item(kind: &str) -> Value {
         "propertyType": if kind == "hotels" { "Boutique hotel" } else { "" },
         "eyebrow": if kind == "destinations" { "Field guide" } else { "" }
     })
+}
+
+async fn media_rows(state: &AppState) -> Vec<Value> {
+    camel_rows(state, "SELECT id, filename, alt, caption, width, height, variants FROM media_assets ORDER BY created_at DESC").await
 }
 
 async fn picker_payload(state: &AppState) -> (Vec<Value>, Vec<Value>) {

@@ -16,6 +16,7 @@
     {% endif %}
 </head>
 <body>
+    {% if !meta.admin %}
     <div class="site-header__sentinel" aria-hidden="true"></div>
     <header data-overlay="{% if meta.header_overlay %}true{% else %}false{% endif %}" class="site-header {% if meta.header_overlay %}site-header--overlay{% else %}site-header--solid{% endif %}">
         {% if meta.header_overlay %}
@@ -36,18 +37,8 @@
             <div class="site-header__actions">
                 <a class="button site-header__search-button {% if meta.header_overlay %}site-header__search-button--overlay{% else %}is-primary{% endif %}" href="/search">Find a stay</a>
             </div>
-            {% if meta.admin %}
-            <nav class="site-header__admin-mobile-nav" aria-label="Mobile navigation">
-                <details>
-                    <summary>Menu</summary>
-                    <a href="/destinations">Destinations</a>
-                    <a href="/search">Hotels</a>
-                    <a href="/blog">Journal</a>
-                </details>
-            </nav>
-            {% else %}
             <div data-island="MobileNav" data-hydrate="load" data-props="{&quot;links&quot;:[{&quot;label&quot;:&quot;Destinations&quot;,&quot;href&quot;:&quot;/destinations&quot;},{&quot;label&quot;:&quot;Hotels&quot;,&quot;href&quot;:&quot;/search&quot;},{&quot;label&quot;:&quot;Journal&quot;,&quot;href&quot;:&quot;/blog&quot;}]}"></div>
-            {% endif %}
         </div>
     </header>
+    {% endif %}
     <main id="main" class="app-main {% if meta.header_overlay %}app-main--header-overlay{% endif %}">

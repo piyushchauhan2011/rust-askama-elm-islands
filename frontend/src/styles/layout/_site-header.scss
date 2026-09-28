@@ -183,8 +183,7 @@
   background: currentColor;
 }
 
-.site-header__mobile-toggle,
-.site-header__admin-mobile-nav {
+.site-header__mobile-toggle {
   display: none;
 }
 
@@ -197,8 +196,7 @@
     display: block;
   }
 
-  .site-header__mobile-toggle,
-  .site-header__admin-mobile-nav {
+  .site-header__mobile-toggle {
     display: inline-flex;
   }
 }

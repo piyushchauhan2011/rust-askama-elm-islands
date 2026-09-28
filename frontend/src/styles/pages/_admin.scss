@@ -20,8 +20,8 @@ html:has(.admin-shell) {
 
 .admin-shell__sidebar {
   position: sticky;
-  top: 6rem;
-  height: calc(100vh - 7rem);
+  top: 1rem;
+  height: calc(100dvh - 2rem);
 }
 
 .admin-shell__sidebar-inner {
@@ -126,7 +126,7 @@ html:has(.admin-shell) {
 
 .admin-dashboard__stats {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 0.75rem;
 }
 
@@ -258,7 +258,7 @@ html:has(.admin-shell) {
 
 @media (width < $app-xl) {
   .admin-dashboard__stats {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

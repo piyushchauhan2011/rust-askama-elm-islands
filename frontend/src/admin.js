@@ -14,3 +14,14 @@ if (root) {
     app.ports?.urlChanged?.send(window.location.pathname)
   })
 }
+
+const dialogs = new MutationObserver(() => {
+  document.querySelectorAll('dialog.modal').forEach((dialog) => {
+    if (dialog.getAttribute('data-open') === 'false') {
+      if (dialog.open) dialog.close()
+      return
+    }
+    if (!dialog.open) dialog.showModal()
+  })
+})
+dialogs.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-open'] })

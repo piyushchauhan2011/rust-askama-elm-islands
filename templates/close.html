@@ -1,4 +1,5 @@
     </main>
+    {% if !meta.admin %}
     <footer class="site-footer">
         <div class="app-container">
             <div class="site-footer__grid">
@@ -27,6 +28,7 @@
             </div>
         </div>
     </footer>
+    {% endif %}
     <script type="module" src="{{ meta.script }}"></script>
 </body>
 </html>
