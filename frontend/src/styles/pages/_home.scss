@@ -109,7 +109,7 @@
   line-height: 1.5rem;
 }
 
-@media (width < $app-lg) {
+@media (max-width: ($app-lg - 1px)) {
   .home-page__destination-grid,
   .home-page__hotel-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -120,13 +120,13 @@
   }
 }
 
-@media (width < $app-md) {
+@media (max-width: ($app-md - 1px)) {
   .home-page__journal-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .home-page__hero {
     height: 100vh;
     min-height: 45.625rem;

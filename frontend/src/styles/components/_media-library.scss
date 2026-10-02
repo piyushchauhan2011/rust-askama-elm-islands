@@ -291,7 +291,7 @@
   color: var(--app-muted-color);
 }
 
-@media (width < $app-lg) {
+@media (max-width: ($app-lg - 1px)) {
   .media-library__upload {
     grid-template-columns: 1fr;
   }
@@ -311,7 +311,7 @@
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .media-library__fields,
   .media-library__grid,
   .media-library__variants {

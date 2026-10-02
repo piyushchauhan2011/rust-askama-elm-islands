@@ -10,7 +10,7 @@
 
 .search-page__layout {
   display: grid;
-  grid-template-columns: 17.5rem 1fr;
+  grid-template-columns: minmax(0, 17.5rem) minmax(0, 1fr);
   gap: 2.5rem;
   margin-top: 3.5rem;
 }
@@ -95,13 +95,13 @@
   margin-top: 2.5rem;
 }
 
-@media (width < $app-lg) {
+@media (max-width: ($app-lg - 1px)) {
   .search-page__layout {
     grid-template-columns: 1fr;
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .search-page__results {
     grid-template-columns: 1fr;
   }

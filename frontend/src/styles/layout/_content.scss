@@ -58,7 +58,7 @@
   margin-top: calc(var(--header-h) * -1);
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .app-container {
     width: calc(100% - 1.75rem);
   }

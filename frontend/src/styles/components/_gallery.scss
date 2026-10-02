@@ -205,13 +205,13 @@
   object-fit: cover;
 }
 
-@media (width < $app-lg) {
+@media (max-width: ($app-lg - 1px)) {
   .gallery-grid__item--fifth {
     display: none;
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .gallery-grid {
     height: auto;
     grid-template-columns: 2fr 1fr;

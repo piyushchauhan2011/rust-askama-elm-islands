@@ -171,7 +171,7 @@ dialog.mobile-navigation[open] {
   text-align: center;
 }
 
-@media (width < $app-lg) {
+@media (max-width: ($app-lg - 1px)) {
   .mobile-navigation__trigger {
     display: inline-grid;
   }

@@ -121,13 +121,13 @@
   padding-bottom: 4rem;
 }
 
-@media (width < $app-md) {
+@media (max-width: ($app-md - 1px)) {
   .blog-page__card--featured > a {
     grid-template-columns: 1fr;
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .blog-page__grid {
     grid-template-columns: 1fr;
   }

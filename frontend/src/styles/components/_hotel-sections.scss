@@ -375,7 +375,7 @@
   color: var(--app-muted-color);
 }
 
-@media (width < $app-lg) {
+@media (max-width: ($app-lg - 1px)) {
   .hotel-highlights__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -387,7 +387,7 @@
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .hotel-location__places,
   .hotel-reviews__grid,
   .hotel-highlights__grid {
@@ -474,7 +474,7 @@
   margin-top: 0.25rem;
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .hotel-facilities__groups,
   .hotel-facilities__groups ul,
   .hotel-facilities__facts {

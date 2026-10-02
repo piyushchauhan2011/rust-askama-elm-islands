@@ -256,13 +256,13 @@ html:has(.admin-shell) {
   gap: 0.75rem;
 }
 
-@media (width < $app-xl) {
+@media (max-width: ($app-xl - 1px)) {
   .admin-dashboard__stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (width < $app-lg) {
+@media (max-width: ($app-lg - 1px)) {
   .admin-shell__layout {
     grid-template-columns: 1fr;
   }
@@ -277,7 +277,7 @@ html:has(.admin-shell) {
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .admin-shell__layout {
     width: calc(100% - 1rem);
   }

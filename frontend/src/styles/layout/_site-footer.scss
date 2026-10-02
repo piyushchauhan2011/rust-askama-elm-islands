@@ -44,7 +44,7 @@
   font-size: 0.75rem;
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .site-footer__grid {
     grid-template-columns: 1fr;
   }

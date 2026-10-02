@@ -81,16 +81,13 @@
 .date-picker__trigger {
   display: flex;
   width: 100%;
-  height: auto;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
-  padding: 0;
   color: var(--app-body-color);
   font-size: 0.875rem;
   font-weight: 400;
   text-align: left;
-  box-shadow: none;
 }
 
 .date-picker__trigger--placeholder {
@@ -173,7 +170,7 @@
   font-size: 0.875rem;
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .date-picker__popover {
     position: fixed;
     top: 50%;

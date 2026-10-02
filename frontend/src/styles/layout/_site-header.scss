@@ -187,7 +187,7 @@
   display: none;
 }
 
-@media (width < $app-lg) {
+@media (max-width: ($app-lg - 1px)) {
   .site-header__nav,
   .site-header__actions {
     display: none;

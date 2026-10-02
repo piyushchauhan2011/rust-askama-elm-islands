@@ -228,7 +228,7 @@
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .offer-card {
     grid-template-columns: 1fr;
   }

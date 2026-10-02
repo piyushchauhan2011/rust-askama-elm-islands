@@ -139,7 +139,7 @@
   gap: 1rem;
 }
 
-@media (width < $app-lg) {
+@media (max-width: ($app-lg - 1px)) {
   .design-system__split {
     grid-template-columns: 1fr;
   }
@@ -151,7 +151,7 @@
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .design-system__tokens,
   .design-system__tokens--large,
   .design-system__alerts {

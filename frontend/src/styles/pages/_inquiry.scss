@@ -21,7 +21,8 @@
 }
 
 .inquiry-page__intro .display-title {
-  font-size: clamp(3.375rem, 5vw, 4.75rem);
+  font-size: clamp(2.75rem, 5vw, 4.75rem);
+  line-height: 1.02;
 }
 
 .inquiry-page__intro > p {
@@ -159,13 +160,13 @@
   margin-top: 2rem;
 }
 
-@media (width < $app-lg) {
+@media (max-width: ($app-lg - 1px)) {
   .inquiry-page {
     grid-template-columns: 1fr;
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .inquiry-page__form-grid {
     grid-template-columns: 1fr;
   }

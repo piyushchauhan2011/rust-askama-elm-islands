@@ -131,7 +131,7 @@
   border-radius: 50rem;
 }
 
-@media (width < $app-md) {
+@media (max-width: ($app-md - 1px)) {
   .hotel-room {
     grid-template-columns: 1fr;
   }
@@ -145,7 +145,7 @@
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .hotel-room__header {
     padding: 2rem 2rem 1.5rem;
   }

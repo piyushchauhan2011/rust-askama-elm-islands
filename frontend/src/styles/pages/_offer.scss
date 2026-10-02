@@ -207,7 +207,7 @@
   margin-top: 0.75rem;
 }
 
-@media (width < $app-lg) {
+@media (max-width: ($app-lg - 1px)) {
   .offer-page__details {
     grid-template-columns: 1fr;
   }
@@ -234,7 +234,7 @@
   }
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .offer-page__benefits {
     grid-template-columns: 1fr;
   }

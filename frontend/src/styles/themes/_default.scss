@@ -23,7 +23,7 @@
   --header-h: 76px;
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   :root {
     --header-h: 68px;
   }

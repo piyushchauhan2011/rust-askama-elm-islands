@@ -471,15 +471,7 @@ dateField fieldId fieldName labelText target current form =
     div [ class ("search-form__field date-picker" ++ openClass form.open target), holdDate ]
         [ label [ class "label", Html.Attributes.for fieldId ] [ text labelText ]
         , input [ type_ "hidden", name fieldName, value current ] []
-        , button [ type_ "button", class "input date-picker__trigger", id fieldId, onClick (OpenDate target) ]
-            [ text
-                (if current == "" then
-                    "Add date"
-
-                 else
-                    current
-                )
-            ]
+        , dateButton fieldId current "Add date" target
         , if form.open == Just target then
             div [ class "date-picker__popover" ] [ calendar form.year form.month target ]
 
@@ -504,48 +496,49 @@ searchFilters filters =
                 , hidden "page" "1"
                 , labeled "hotel-query" "Search by name" <|
                     input [ class "input", id "hotel-query", name "query", value filters.query ] []
-                , labeled "min-price" "Minimum price" <|
-                    input [ class "input", id "min-price", name "minPrice", type_ "number", value filters.minPrice ] []
-                , labeled "max-price" "Maximum price" <|
-                    input [ class "input", id "max-price", name "maxPrice", type_ "number", value filters.maxPrice ] []
+                , div [ class "search-page__price-fields" ]
+                    [ labeled "min-price" "Min price" <|
+                        input [ class "input", id "min-price", name "minPrice", type_ "number", Html.Attributes.min "0", value filters.minPrice ] []
+                    , labeled "max-price" "Max price" <|
+                        input [ class "input", id "max-price", name "maxPrice", type_ "number", Html.Attributes.min "0", value filters.maxPrice ] []
+                    ]
                 , labeled "min-rating" "Minimum rating" <|
-                    div [ class "select" ]
+                    div [ class "select is-fullwidth" ]
                         [ select [ id "min-rating", name "rating" ]
-                            (option [ attribute "value" "", selected (filters.rating == "") ] [ text "Any" ]
+                            (option [ attribute "value" "", selected (filters.rating == "") ] [ text "Any rating" ]
                                 :: List.map
                                     (\score ->
                                         option [ value score, selected (filters.rating == score) ] [ text (score ++ "+") ]
                                     )
-                                    [ "3", "3.5", "4", "4.5" ]
+                                    [ "4.5", "4.7", "4.8" ]
                             )
                         ]
-                , div [ class "field" ]
-                    [ p [ class "label" ] [ text "Amenities" ]
-                    , ul []
+                , Html.fieldset []
+                    [ Html.legend [] [ text "Amenities" ]
+                    , div [ class "search-page__checks" ]
                         (List.map
                             (\amenity ->
-                                li []
-                                    [ label []
-                                        [ input
-                                            [ type_ "checkbox"
-                                            , name "amenities"
-                                            , value amenity.id
-                                            , checked (List.member amenity.id filters.selected)
-                                            , onClick (ToggleAmenity amenity.id)
-                                            ]
-                                            []
-                                        , text amenity.name
+                                label [ class "checkbox" ]
+                                    [ input
+                                        [ id ("amenity-" ++ amenity.id)
+                                        , type_ "checkbox"
+                                        , name "amenities"
+                                        , value amenity.id
+                                        , checked (List.member amenity.id filters.selected)
+                                        , onClick (ToggleAmenity amenity.id)
                                         ]
+                                        []
+                                    , text (" " ++ amenity.name)
                                     ]
                             )
                             filters.amenities
                         )
                     ]
                 , label [ class "checkbox" ]
-                    [ input [ type_ "checkbox", name "offers", value "true", checked filters.offers, onClick ToggleOffers ] []
+                    [ input [ id "offers-only", type_ "checkbox", name "offers", value "true", checked filters.offers, onClick ToggleOffers ] []
                     , text " Offers available"
                     ]
-                , button [ class "button is-primary", type_ "submit" ] [ text "Apply filters" ]
+                , button [ class "button is-primary is-fullwidth", type_ "submit" ] [ text "Apply filters" ]
                 ]
             ]
         ]
@@ -761,40 +754,48 @@ inquiryView form =
             ]
 
     else
-        Html.form [ class "inquiry-form", preventSubmit SubmitInquiry ]
-            [ if form.error /= "" then
-                p [ class "notification is-danger", attribute "role" "alert" ] [ text form.error ]
+        div [ class "card inquiry-page__card" ]
+            [ div [ class "card-content" ]
+                [ Html.form [ preventSubmit SubmitInquiry ]
+                    [ if form.error /= "" then
+                        p [ class "notification is-danger", attribute "role" "alert" ] [ text form.error ]
 
-              else
-                text ""
-            , dateInquiry "inquiry-check-in" "Check in" CheckIn form.checkIn form
-            , dateInquiry "inquiry-check-out" "Check out" CheckOut form.checkOut form
-            , labeled "inquiry-adults" "Adults" <|
-                input [ class "input", id "inquiry-adults", type_ "number", value form.adults, onInput (EditInquiry "adults") ] []
-            , labeled "inquiry-children" "Children" <|
-                input [ class "input", id "inquiry-children", type_ "number", value form.children, onInput (EditInquiry "children") ] []
-            , labeled "inquiry-name" "Name" <|
-                input [ class "input", id "inquiry-name", value form.guest, onInput (EditInquiry "name") ] []
-            , labeled "inquiry-email" "Email" <|
-                input [ class "input", id "inquiry-email", type_ "email", value form.email, onInput (EditInquiry "email") ] []
-            , labeled "inquiry-phone" "Phone" <|
-                input [ class "input", id "inquiry-phone", value form.phone, onInput (EditInquiry "phone") ] []
-            , labeled "inquiry-message" "Message" <|
-                Html.textarea [ class "textarea", id "inquiry-message", value form.message, onInput (EditInquiry "message") ] []
-            , div [ attribute "hidden" "hidden" ]
-                [ label [] [ text "Website" ]
-                , input [ name "website", value form.website, onInput (EditInquiry "website"), attribute "tabindex" "-1", attribute "autocomplete" "off" ] []
-                ]
-            , button [ class "button is-primary", type_ "submit", Html.Attributes.disabled form.pending ]
-                [ text
-                    (if form.pending then
-                        "Sending…"
+                      else
+                        text ""
+                    , h2 [] [ text "Stay details" ]
+                    , div [ class "inquiry-page__form-grid" ]
+                        [ dateInquiry "inquiry-check-in" "Check in" CheckIn form.checkIn form
+                        , dateInquiry "inquiry-check-out" "Check out" CheckOut form.checkOut form
+                        , guestCount "inquiry-adults" "Adults" "adults" form.adults (List.range 1 6)
+                        , guestCount "inquiry-children" "Children" "children" form.children (List.range 0 4)
+                        ]
+                    , h2 [] [ text "Your details" ]
+                    , div [ class "inquiry-page__form-grid" ]
+                        [ labeled "inquiry-name" "Full name" <|
+                            input [ class "input", id "inquiry-name", name "name", attribute "autocomplete" "name", value form.guest, onInput (EditInquiry "name") ] []
+                        , labeled "inquiry-email" "Email" <|
+                            input [ class "input", id "inquiry-email", name "email", type_ "email", attribute "autocomplete" "email", value form.email, onInput (EditInquiry "email") ] []
+                        , labeled "inquiry-phone" "Phone, optional" <|
+                            input [ class "input", id "inquiry-phone", name "phone", type_ "tel", attribute "autocomplete" "tel", value form.phone, onInput (EditInquiry "phone") ] []
+                        ]
+                    , labeled "inquiry-message" "Anything we should know?" <|
+                        Html.textarea [ class "textarea", id "inquiry-message", name "message", Html.Attributes.rows 5, placeholder "Celebrations, accessibility needs, arrival plans…", value form.message, onInput (EditInquiry "message") ] []
+                    , div [ class "inquiry-page__honeypot", attribute "aria-hidden" "true" ]
+                        [ label [ class "label", attribute "for" "website" ] [ text "Website" ]
+                        , input [ class "input", id "website", name "website", value form.website, onInput (EditInquiry "website"), attribute "tabindex" "-1", attribute "autocomplete" "off" ] []
+                        ]
+                    , button [ class "button is-primary is-fullwidth", type_ "submit", Html.Attributes.disabled form.pending ]
+                        [ text
+                            (if form.pending then
+                                "Sending…"
 
-                     else
-                        "Send inquiry"
-                    )
+                             else
+                                "Send inquiry"
+                            )
+                        ]
+                    , Html.small [ class "inquiry-page__privacy" ] [ text "Your details are used only to respond to this request." ]
+                    ]
                 ]
-            , p [] [ text "No payment is taken. The hotel confirms availability personally." ]
             ]
 
 
@@ -802,15 +803,7 @@ dateInquiry : String -> String -> DateTarget -> String -> Inquiry -> Html Msg
 dateInquiry fieldId labelText target current form =
     div [ class ("field date-picker" ++ openClass form.open target), holdDate ]
         [ label [ class "label", Html.Attributes.for fieldId ] [ text labelText ]
-        , button [ type_ "button", class "input date-picker__trigger", id fieldId, onClick (OpenDate target) ]
-            [ text
-                (if current == "" then
-                    "Add date"
-
-                 else
-                    current
-                )
-            ]
+        , dateButton fieldId current "Choose date" target
         , if form.open == Just target then
             div [ class "date-picker__popover" ] [ calendar form.year form.month target ]
 
@@ -1162,6 +1155,50 @@ formField fieldId labelText control =
         [ label [ class "label", Html.Attributes.for fieldId ] [ text labelText ]
         , control
         ]
+
+
+dateButton : String -> String -> String -> DateTarget -> Html Msg
+dateButton fieldId current emptyLabel target =
+    button
+        [ type_ "button"
+        , class
+            ("input date-picker__trigger"
+                ++ (if current == "" then
+                        " date-picker__trigger--placeholder"
+
+                    else
+                        ""
+                   )
+            )
+        , id fieldId
+        , onClick (OpenDate target)
+        ]
+        [ text
+            (if current == "" then
+                emptyLabel
+
+             else
+                current
+            )
+        ]
+
+
+guestCount : String -> String -> String -> String -> List Int -> Html Msg
+guestCount fieldId labelText fieldName current options =
+    labeled fieldId labelText <|
+        div [ class "select is-fullwidth" ]
+            [ select [ id fieldId, name fieldName, onInput (EditInquiry fieldName) ]
+                (List.map
+                    (\count ->
+                        let
+                            countText =
+                                String.fromInt count
+                        in
+                        option [ value countText, selected (countText == current) ] [ text countText ]
+                    )
+                    options
+                )
+            ]
 
 
 labeled : String -> String -> Html Msg -> Html Msg

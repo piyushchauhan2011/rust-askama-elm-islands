@@ -73,7 +73,7 @@
   white-space: pre-wrap;
 }
 
-@media (width <= $app-sm) {
+@media (max-width: $app-sm) {
   .route-error__actions {
     flex-direction: column;
   }
