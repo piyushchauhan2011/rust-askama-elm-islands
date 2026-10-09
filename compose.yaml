@@ -16,5 +16,16 @@ services:
       timeout: 5s
       retries: 12
 
+  lightpanda:
+    image: lightpanda/browser:nightly
+    restart: unless-stopped
+    environment:
+      LIGHTPANDA_DISABLE_TELEMETRY: "true"
+    ports:
+      - "127.0.0.1:9222:9222"
+    command: lightpanda serve --host 0.0.0.0 --port 9222
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
 volumes:
   postgres_data:

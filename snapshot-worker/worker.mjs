@@ -1,6 +1,6 @@
 import { createHash, randomUUID } from 'node:crypto'
 import { readFileSync, existsSync, readdirSync } from 'node:fs'
-import { chromium } from 'playwright'
+import { chromium } from 'playwright-core'
 import pg from 'pg'
 
 if (existsSync('.env')) {
@@ -34,7 +34,7 @@ const runtime = '/assets/' + assets['src/islands.js'].file
 const once = process.argv.includes('--once')
 const drain = process.argv.includes('--drain')
 const pool = new pg.Pool({ connectionString: DATABASE_URL, max: 4 })
-const browser = await chromium.launch({ headless: true })
+const browser = await chromium.connectOverCDP(process.env.LIGHTPANDA_CDP_URL || 'ws://127.0.0.1:9222')
 let closing = false
 process.on('SIGTERM', () => { closing = true })
 process.on('SIGINT', () => { closing = true })
@@ -137,8 +137,13 @@ async function work() {
 }
 try {
   await releaseChangedAssets()
+  const concurrency = parseInt(process.env.SNAPSHOT_CONCURRENCY || '1', 10)
   do {
-    await Promise.all([work(), work()])
+    if (concurrency > 1) {
+      await Promise.all(Array.from({ length: concurrency }, () => work()))
+    } else {
+      await work()
+    }
     if (once) break
     await new Promise(resolve => setTimeout(resolve, 1500))
   } while (!closing)

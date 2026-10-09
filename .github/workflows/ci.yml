@@ -1,0 +1,126 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Build, Test & Snapshots (Lightpanda)
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: hotel
+          POSTGRES_PASSWORD: hotel_local_only
+          POSTGRES_DB: hotel
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+      lightpanda:
+        image: lightpanda/browser:nightly
+        ports:
+          - 9222:9222
+        env:
+          LIGHTPANDA_DISABLE_TELEMETRY: "true"
+        options: >-
+          --add-host=host.docker.internal:host-gateway
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - name: Rust Cache
+        uses: Swatinem/rust-cache@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            frontend/package-lock.json
+            snapshot-worker/package-lock.json
+
+      - name: Install Elm & Frontend Assets
+        run: |
+          cd frontend
+          npm ci
+          npm run build
+
+      - name: Seed Database
+        env:
+          DATABASE_URL: postgresql://hotel:hotel_local_only@localhost:5432/hotel
+        run: cargo run --bin seed
+
+      - name: Run Cargo Tests
+        env:
+          TEST_DATABASE_URL: postgresql://hotel:hotel_local_only@localhost:5432/hotel_test
+        run: |
+          docker exec ${{ job.services.postgres.id }} createdb -U hotel hotel_test
+          cargo test -- --test-threads=1
+
+      - name: Install Snapshot Worker Dependencies
+        run: |
+          cd snapshot-worker
+          npm ci
+
+      - name: Start Elsewhere Server
+        env:
+          APP_ENV: development
+          DATABASE_URL: postgresql://hotel:hotel_local_only@localhost:5432/hotel
+          SNAPSHOT_MODE: on
+          SNAPSHOT_INTERNAL_TOKEN: test-snapshot-token-with-32-characters-minimum-for-ci
+          PUBLIC_ORIGIN: http://localhost:5000
+          SNAPSHOT_API_ORIGIN: http://127.0.0.1:5000
+          LIGHTPANDA_CDP_URL: ws://127.0.0.1:9222
+        run: |
+          cargo run &
+          SERVER_PID=$!
+          echo "SERVER_PID=$SERVER_PID" >> $GITHUB_ENV
+          # Poll until server responds
+          for i in {1..30}; do
+            if curl -sI http://localhost:5000/robots.txt >/dev/null; then
+              echo "Server is ready!"
+              break
+            fi
+            sleep 1
+          done
+
+      - name: Generate Snapshots via Lightpanda
+        env:
+          DATABASE_URL: postgresql://hotel:hotel_local_only@localhost:5432/hotel
+          SNAPSHOT_INTERNAL_TOKEN: test-snapshot-token-with-32-characters-minimum-for-ci
+          SNAPSHOT_API_ORIGIN: http://host.docker.internal:5000
+          LIGHTPANDA_CDP_URL: ws://127.0.0.1:9222
+          SNAPSHOT_CONCURRENCY: 1
+        run: |
+          node snapshot-worker/worker.mjs --once --drain
+
+      - name: Verify Snapshot Output
+        run: |
+          # Verify the page returns 200 with snapshot version header
+          RESPONSE=$(curl -sI http://localhost:5000/)
+          echo "$RESPONSE"
+          echo "$RESPONSE" | grep "HTTP/1.1 200 OK"
+          echo "$RESPONSE" | grep -i "x-snapshot-version:"
+          # Stop server
+          kill $SERVER_PID || true
